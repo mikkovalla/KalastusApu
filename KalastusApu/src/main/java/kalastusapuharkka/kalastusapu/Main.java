@@ -1,7 +1,5 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+Tämä Main luokka on luotu vain testiä varten
  */
 package kalastusapuharkka.kalastusapu;
 
@@ -10,5 +8,5 @@ package kalastusapuharkka.kalastusapu;
  * @author mikko
  */
 public class Main {
-    
+
 }
