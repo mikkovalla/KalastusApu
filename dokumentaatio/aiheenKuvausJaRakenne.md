@@ -20,4 +20,4 @@ Käyttäjä käyttää ohjelmaa seuraavanlaisesti:
 ##Suunnittelu tason luokkakaavio
 (mistä puuttuu pakkaukset korjauksien takia)
 
-![Suunnittelutason luokkakaavio ilman pakkauksia](kalastusApu_suunnitteluTaso_luokkakaavio.png "Suunnittelu tason luokkakkaavio mistä puuttuu pakkaukset")
+![Suunnittelutason luokkakaavio ilman pakkauksia](file:///Users/mikko/Google%20Drive/Koulu/kalastusApu_suunnitteluTaso_luokkakaavio%20(1).png "Suunnittelu tason luokkakkaavio mistä puuttuu pakkaukset")
