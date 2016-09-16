@@ -16,3 +16,7 @@ Käyttäjä käyttää ohjelmaa seuraavanlaisesti:
 2. Ohjelma hakee päivämäärän jonka perusteella se määrittelee vallitsevan sesongin ja kuukauden
 3. Ohjelma hakee paikallisen sää datan kolmannen osapuolen rajapinnasta
 4. Ohjelma esittää käyttäjälle viehe suositukset
+
+##Suunnittelu tason luokkakaavio (mistä puuttuu pakkaukset korjauksien takia)
+
+![Suunnittelutason luokkakaavio ilman pakkauksia](https://www.draw.io/#LkalastusApu_suunnitteluTaso_luokkakaavio.png "Suunnittelu tason luokkakkaavio mistä puuttuu pakkaukset")
