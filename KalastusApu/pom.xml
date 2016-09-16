@@ -33,6 +33,35 @@
                 <groupId>org.pitest</groupId>
                 <artifactId>pitest-maven</artifactId>
                 <version>1.1.8</version>
+                <configuration>
+                    <targetClasses>
+                        <param>aikapvm.*</param>
+                        <param>alue.*</param>
+                        <param>kalalaji.*</param>
+                        <param>saatila.*</param>
+                        <param>sesonki.*</param>
+                    </targetClasses>
+                    <targetTests>
+                        <param>aikapvm.*</param>
+                        <param>alue.*</param>
+                        <param>kalalaji.*</param>
+                        <param>saatila.*</param>
+                        <param>sesonki.*</param>
+                    </targetTests>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-checkstyle-plugin</artifactId>
+                <version>2.17</version>
+                <configuration>
+                    <configLocation>checkstyle.xml</configLocation>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jxr-plugin</artifactId>
+                <version>2.5</version>
             </plugin>
         </plugins>
     </build>
