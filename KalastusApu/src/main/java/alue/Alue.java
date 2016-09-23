@@ -12,4 +12,12 @@ package alue;
 public interface Alue {
 
     public String getAlue();
+
+    public String vedenVari();
+
+    public int vedenLampo();
+
+    public int vedenKorkeus();
+
+    public void oletusVedenVari();
 }
