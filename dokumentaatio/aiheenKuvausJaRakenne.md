@@ -5,6 +5,12 @@ vuodenajasta, säästä, kalalajista sekä alueesta jolla kalastaa.
 
 Uistimien valinta pohjautuu tekijän omaan kokemukseen, oppaiden sekä limnologi ystävän vinkkeihin.
 
+##Huomioitavaa:
+
+Alueiden oletus vedenväri perustuu meren sesongin mukaisissa väreissä Espoon edustaan ja Saaristomereen, järven oletus veden väri perustuu Saimaan vesitöön ja joen oletus veden väri perustuu keski-suomen reittikoskien yleiseen värisävyyn.
+
+Huomioitakoon että esimerkiksi Uudellamaalla Vantaanjoen vesi on hyvin savimaista johtuen maanviljelys painotteisesta valuma-alueesta, kun taas Karjaanjoen vesi (Karkkila) on taas kirkaan teen väristä vaikka molempien jokien lähtö kohdat ovat melkein samalla korkeudella Riihimäen paikkeilla.
+
 ##Käyttäjät:
 * Kalastaja
 
