@@ -11,10 +11,10 @@ Alueiden oletus vedenväri perustuu meren sesongin mukaisissa väreissä Espoon 
 
 Huomioitakoon että esimerkiksi Uudellamaalla Vantaanjoen vesi on hyvin savimaista johtuen maanviljelys painotteisesta valuma-alueesta, kun taas Karjaanjoen vesi (Karkkila) on taas kirkaan teen väristä vaikka molempien jokien lähtö kohdat ovat melkein samalla korkeudella Riihimäen paikkeilla.
 
-##Käyttäjät:
+## Käyttäjät:
 * Kalastaja
 
-##Käyttö
+## Käyttö
 
 Käyttäjä käyttää ohjelmaa seuraavanlaisesti:
 
@@ -23,7 +23,7 @@ Käyttäjä käyttää ohjelmaa seuraavanlaisesti:
 3. Ohjelma hakee paikallisen sää datan kolmannen osapuolen rajapinnasta
 4. Ohjelma esittää käyttäjälle viehe suositukset
 
-##Suunnittelu tason luokkakaavio
-(mistä puuttuu pakkaukset korjauksien takia)
+## Luokkakaavio
 
-![Suunnittelutason luokkakaavio ilman pakkauksia](https://github.com/mikkovalla/KalastusApu/blob/master/dokumentaatio/kalastusApu_suunnitteluTaso_luokkakaavio%20(1).png "Suunnittelu tason luokkakkaavio mistä puuttuu pakkaukset")
+
+![Luokkakaavio päivitetty](https://github.com/mikkovalla/KalastusApu/blob/master/dokumentaatio/kalastusApu_luokkakaavio2.png "Luokkakaavio päivitetty")
