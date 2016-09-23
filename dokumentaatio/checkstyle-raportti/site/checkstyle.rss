@@ -25,7 +25,7 @@ under the License.
     <language>en-us</language>
     <copyright>&#169;2016</copyright>
     <item>
-      <title>File: 13,
+      <title>File: 16,
              Errors: 0,
              Warnings: 0,
              Infos: 0
@@ -103,6 +103,20 @@ under the License.
                           <tr>
                 <td>
                   <a href="${project.url}/checkstyle.html#sesonki.Sesonki.java">sesonki/Sesonki.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="${project.url}/checkstyle.html#alue.Jarvi.java">alue/Jarvi.java</a>
                 </td>
                 <td>
                   0
@@ -200,6 +214,20 @@ under the License.
               </tr>
                           <tr>
                 <td>
+                  <a href="${project.url}/checkstyle.html#alue.Joki.java">alue/Joki.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
                   <a href="${project.url}/checkstyle.html#aikapvm.Kuukausi.java">aikapvm/Kuukausi.java</a>
                 </td>
                 <td>
@@ -215,6 +243,20 @@ under the License.
                           <tr>
                 <td>
                   <a href="${project.url}/checkstyle.html#alue.AlueValinta.java">alue/AlueValinta.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="${project.url}/checkstyle.html#alue.Meri.java">alue/Meri.java</a>
                 </td>
                 <td>
                   0
