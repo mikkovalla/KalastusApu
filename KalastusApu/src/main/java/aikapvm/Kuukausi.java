@@ -18,18 +18,15 @@ public class Kuukausi {
 
     public Kuukausi() {
         GregorianCalendar kk = new GregorianCalendar();
-        kuukausi = kk.get(Calendar.MONTH);
-        kuukausi = kuukausi + 1;
+        this.kuukausi = kk.get(Calendar.MONTH);
+        this.kuukausi = this.kuukausi + 1;
     }
 
     public int getKuukausi() {
         return kuukausi;
     }
 
-    /*public static void main(String[] args) {
-
-        Kuukausi kk = new Kuukausi();
-        kk.getKuukausi();
-
-    }*/
+    public void setKuukausi(int kk) {
+        this.kuukausi = kk;
+    }
 }
