@@ -46,9 +46,8 @@ public class KuukausiTest {
 
     @Test
     public void setKuukausiAsettaaUudenArvon() {
-        int uusiKk = 15;
-        k.setKuukausi(uusiKk);
-        assertEquals(k.getKuukausi(), uusiKk);
+        k.setKuukausi(15);
+        assertEquals(k.getKuukausi(), 15);
     }
 
 }
