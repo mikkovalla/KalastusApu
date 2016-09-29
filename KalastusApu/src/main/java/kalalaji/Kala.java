@@ -5,7 +5,7 @@
  */
 package kalalaji;
 
-import sesonki.SesonkiNyt;
+import aikapvm.SesonkiNyt;
 
 /**
  *
