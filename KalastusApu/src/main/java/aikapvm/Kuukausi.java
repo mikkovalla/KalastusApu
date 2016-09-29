@@ -15,6 +15,7 @@ import java.util.GregorianCalendar;
 public class Kuukausi {
 
     private int kuukausi;
+    private Kuukaudet k;
 
     public Kuukausi() {
         GregorianCalendar kk = new GregorianCalendar();
@@ -23,10 +24,32 @@ public class Kuukausi {
     }
 
     public int getKuukausi() {
-        return kuukausi;
+        return this.kuukausi;
     }
 
     public void setKuukausi(int kk) {
-        this.kuukausi = kk;
+
+        while (true) {
+            if (kk <= 12 || kk >= 1) {
+                this.kuukausi = kk;
+                break;
+            } else {
+                System.out.println("Syötä kuukauden numero väliltä 1 ja 12.");
+            }
+        }
+    }
+
+    public Kuukaudet getKuuNimi() {
+        for (Kuukaudet kN : Kuukaudet.values()) {
+            if (kN.getKuukausiNumero() == getKuukausi()) {
+                return kN;
+            }
+        }
+        return null;
+    }
+
+    @Override
+    public String toString() {
+        return "On " + getKuuNimi() + "(" + this.kuukausi + ")";
     }
 }
