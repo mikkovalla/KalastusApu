@@ -1,13 +1,13 @@
 /*
 Tämä Main luokka on luotu vain testiä varten
  */
-package kalastusapuharkka.kalastusapu;
+package logiikka;
 
 import aikapvm.Kuukausi;
 import alue.AlueValinta;
 import alue.Meri;
 import java.util.Scanner;
-import sesonki.SesonkiNyt;
+import aikapvm.SesonkiNyt;
 
 /**
  *
@@ -20,7 +20,7 @@ public class Main {
         SesonkiNyt sn = new SesonkiNyt();
         Kuukausi kk = new Kuukausi();
 
-        System.out.println("Anna alue missä kalastat: ");
+        /*System.out.println("Anna alue missä kalastat: ");
         System.out.println("Alue voi olla: Meri, Jarvi tai Joki.");
 
         Scanner sc = new Scanner(System.in);
@@ -50,6 +50,10 @@ public class Main {
         meri.setVedenKorkeus(-10);
 
         System.out.println(meri.toString()); //tulostaa meri olion tiedot uusilla parametreilla
-
+         */
+        System.out.println(kk.getKuukausi());
+        System.out.println(kk.toString());
+        
+        System.out.println(sn.toString());
     }
 }
