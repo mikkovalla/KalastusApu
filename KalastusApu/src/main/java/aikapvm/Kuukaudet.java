@@ -30,8 +30,4 @@ public enum Kuukaudet {
     public String getKuukaudenSesonki() {
         return this.sesonki;
     }
-
-    public void setKuukaudenSesonki(String sesonki) {
-        this.sesonki = sesonki;
-    }
 }
