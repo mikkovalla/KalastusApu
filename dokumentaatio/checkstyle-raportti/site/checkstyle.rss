@@ -25,7 +25,7 @@ under the License.
     <language>en-us</language>
     <copyright>&#169;2016</copyright>
     <item>
-      <title>File: 16,
+      <title>File: 20,
              Errors: 0,
              Warnings: 0,
              Infos: 0
@@ -44,6 +44,34 @@ under the License.
             </tr>
           </thead>
           <tbody>
+                          <tr>
+                <td>
+                  <a href="${project.url}/checkstyle.html#logiikka.Main.java">logiikka/Main.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="${project.url}/checkstyle.html#aikapvm.Kuukaudet.java">aikapvm/Kuukaudet.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
                           <tr>
                 <td>
                   <a href="${project.url}/checkstyle.html#alue.Alue.java">alue/Alue.java</a>
@@ -88,35 +116,35 @@ under the License.
               </tr>
                           <tr>
                 <td>
+                  <a href="${project.url}/checkstyle.html#saatila.saaEnum.Sateet.java">saatila/saaEnum/Sateet.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="${project.url}/checkstyle.html#saatila.saa.Sade.java">saatila/saa/Sade.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
                   <a href="${project.url}/checkstyle.html#kalalaji.Hauki.java">kalalaji/Hauki.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="${project.url}/checkstyle.html#sesonki.Sesonki.java">sesonki/Sesonki.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="${project.url}/checkstyle.html#alue.Jarvi.java">alue/Jarvi.java</a>
                 </td>
                 <td>
                   0
@@ -144,6 +172,20 @@ under the License.
               </tr>
                           <tr>
                 <td>
+                  <a href="${project.url}/checkstyle.html#alue.Vesi.java">alue/Vesi.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
                   <a href="${project.url}/checkstyle.html#kalalaji.Ahven.java">kalalaji/Ahven.java</a>
                 </td>
                 <td>
@@ -158,7 +200,7 @@ under the License.
               </tr>
                           <tr>
                 <td>
-                  <a href="${project.url}/checkstyle.html#sesonki.SesonkiNyt.java">sesonki/SesonkiNyt.java</a>
+                  <a href="${project.url}/checkstyle.html#saatila.logiikka.SaaNyt.java">saatila/logiikka/SaaNyt.java</a>
                 </td>
                 <td>
                   0
@@ -172,7 +214,7 @@ under the License.
               </tr>
                           <tr>
                 <td>
-                  <a href="${project.url}/checkstyle.html#kalastusapuharkka.kalastusapu.Main.java">kalastusapuharkka/kalastusapu/Main.java</a>
+                  <a href="${project.url}/checkstyle.html#aikapvm.SesonkiNyt.java">aikapvm/SesonkiNyt.java</a>
                 </td>
                 <td>
                   0
@@ -200,7 +242,7 @@ under the License.
               </tr>
                           <tr>
                 <td>
-                  <a href="${project.url}/checkstyle.html#saatila.Saatila.java">saatila/Saatila.java</a>
+                  <a href="${project.url}/checkstyle.html#saatila.saa.Pilvisyys.java">saatila/saa/Pilvisyys.java</a>
                 </td>
                 <td>
                   0
@@ -214,7 +256,7 @@ under the License.
               </tr>
                           <tr>
                 <td>
-                  <a href="${project.url}/checkstyle.html#alue.Joki.java">alue/Joki.java</a>
+                  <a href="${project.url}/checkstyle.html#saatila.saa.Tuuli.java">saatila/saa/Tuuli.java</a>
                 </td>
                 <td>
                   0
@@ -256,7 +298,21 @@ under the License.
               </tr>
                           <tr>
                 <td>
-                  <a href="${project.url}/checkstyle.html#alue.Meri.java">alue/Meri.java</a>
+                  <a href="${project.url}/checkstyle.html#saatila.saaEnum.Taivas.java">saatila/saaEnum/Taivas.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="${project.url}/checkstyle.html#saatila.saaEnum.Tuulensuunta.java">saatila/saaEnum/Tuulensuunta.java</a>
                 </td>
                 <td>
                   0
