@@ -29,13 +29,10 @@ public class Kuukausi {
 
     public void setKuukausi(int kk) {
 
-        while (true) {
-            if (kk <= 12 || kk >= 1) {
-                this.kuukausi = kk;
-                break;
-            } else {
-                System.out.println("Syötä kuukauden numero väliltä 1 ja 12.");
-            }
+        if (kk <= 12 && kk >= 1) {
+            this.kuukausi = kk;
+        } else {
+            System.out.println("Syötä kuukauden numero väliltä 1 ja 12.");
         }
     }
 
