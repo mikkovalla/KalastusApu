@@ -9,7 +9,7 @@ import alue.AlueValinta;
 import aikapvm.SesonkiNyt;
 import static alue.Vesi.JÄRVI;
 import static alue.Vesi.MERI;
-import static saatila.saaEnum.Tuulensuunta.ETELÄ;
+import static saatila.saaenum.Tuulensuunta.ETELÄ;
 import saatila.saa.Tuuli;
 
 /**
