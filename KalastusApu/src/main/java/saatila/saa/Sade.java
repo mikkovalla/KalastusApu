@@ -5,11 +5,11 @@
  */
 package saatila.saa;
 
-import saatila.saaEnum.Sateet;
+import saatila.saaenum.Sateet;
 
 /**
  *
- * @author mikko
+ * Luokka Sade jonka ilmentymä sisältää Sateet Enum vakio arvon.
  */
 public class Sade {
 
@@ -20,7 +20,7 @@ public class Sade {
     }
 
     public void setSade(Sateet st) {
-        if (st.equals(Sateet.LUMI) || st.equals(Sateet.VESI) || st.equals(Sateet.RÄNTÄ)) {
+        if (st.equals(sateet.LUMI) || st.equals(sateet.VESI) || st.equals(sateet.RÄNTÄ)) {
             this.sateet = st;
         }
     }
