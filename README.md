@@ -20,7 +20,7 @@ Uistimien valinta pohjautuu tekijän omaan kokemukseen, oppaiden sekä limnologi
 
 4. [Checkstyle-raportti kansio](https://github.com/mikkovalla/KalastusApu/tree/master/dokumentaatio/checkstyle-raportti/site)
 
-5. [Pit-raportti kansio](https://github.com/mikkovalla/KalastusApu/tree/master/dokumentaatio/pit-raportti/201609232225)
+5. [Pit-raportti kansio](https://github.com/mikkovalla/KalastusApu/tree/master/dokumentaatio/pit-raportti/201609302147)
 
 
 ----------------------------------------------------------------
