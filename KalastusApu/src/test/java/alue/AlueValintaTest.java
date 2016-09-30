@@ -5,13 +5,10 @@
  */
 package alue;
 
-import aikapvm.Kuukausi;
-import org.junit.After;
-import org.junit.AfterClass;
+import static alue.Vesi.MERI;
 import org.junit.Before;
 import org.junit.Test;
 import static org.junit.Assert.*;
-import org.junit.BeforeClass;
 
 /**
  *
@@ -20,29 +17,29 @@ import org.junit.BeforeClass;
 public class AlueValintaTest {
 
     AlueValinta paikka;
-    private String m = "meri";
+    private Vesi vesi = MERI;
     private String vari = "sininen";
     private int lampo = 10;
     private int korkeus = 0;
 
     @Before
     public void setUp() {
-        paikka = new AlueValinta(m, vari, lampo, korkeus);
+        paikka = new AlueValinta(vesi, vari, lampo, korkeus);
     }
 
     @Test
     public void konstruktoriAsettaaArvon() {
-        String mm = "meri";
+        vesi = MERI;
         String vari2 = "sininen";
         int lampo2 = 12;
         int korkeus2 = -10;
-        paikka = new AlueValinta(mm, vari2, lampo2, korkeus2);
-        assertEquals(paikka.getAlue(), "meri");
+        paikka = new AlueValinta(vesi, vari2, lampo2, korkeus2);
+        assertEquals(paikka.getAlue(), "MERI");
     }
 
     @Test
     public void getAluePalauttaaOikeanArvon() {
-        assertEquals(paikka.getAlue(), "meri");
+        assertEquals(paikka.getAlue(), "MERI");
     }
 
     @Test
@@ -55,7 +52,7 @@ public class AlueValintaTest {
     public void testiSetVedenVariJosTyhja() {
         paikka.setVedenVari("");
         paikka.oletusVedenVari();
-        assertEquals(paikka.vedenVari(), "vihertävä");
+        assertEquals(paikka.vedenVari(), "tumman vihertävä");
     }
 
     @Test
@@ -75,7 +72,7 @@ public class AlueValintaTest {
     public void testVedenVariMuuttaaTyhjänArvonOletukseksiJaPalauttaaOikeanArvon() {
         vari = "";
         paikka.oletusVedenVari();
-        assertEquals(paikka.vedenVari(), "vihertävä");
+        assertEquals(paikka.vedenVari(), "tumman vihertävä");
     }
 
     @Test
@@ -117,23 +114,23 @@ public class AlueValintaTest {
     public void testOletusVedenVariPalauttaaKuukaudenMukaanOikeanArvonMeri() {
         paikka.setVedenVari("");
         paikka.oletusVedenVari();
-        assertEquals(paikka.vedenVari(), "vihertävä");
+        assertEquals(paikka.vedenVari(), "tumman vihertävä");
     }
 
     @Test
     public void testOletusVedenVariPalauttaaKuukaudenMukaanOikeanArvonJarvi() {
-        AlueValinta jarvi = new AlueValinta("jarvi", "punainen", 15, 0);
+        AlueValinta jarvi = new AlueValinta(Vesi.JÄRVI, "punainen", 15, 0);
         jarvi.setVedenVari("");
         jarvi.oletusVedenVari();
-        assertEquals(jarvi.vedenVari(), "vihertävä ruskea");
+        assertEquals(jarvi.vedenVari(), "tumman humuksinen");
     }
 
     @Test
     public void testOletusVedenVariPalauttaaKuukaudenMukaanOikeanArvonJoki() {
-        AlueValinta joki = new AlueValinta("joki", "punainen", 15, 0);
+        AlueValinta joki = new AlueValinta(Vesi.JOKI, "punainen", 15, 0);
         joki.setVedenVari("");
         joki.oletusVedenVari();
-        assertEquals(joki.vedenVari(), "kirkas humuksinen");
+        assertEquals(joki.vedenVari(), "tumman humuksinen");
     }
 
 }
