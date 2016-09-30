@@ -17,10 +17,6 @@ public class SesonkiNyt {
         kk = new Kuukausi();
     }
 
-    public void setSesonki(String sesonki) {
-        kN.setKuukaudenSesonki(sesonki);
-    }
-
     public String getSesonki() {
         return kk.getKuuNimi().getKuukaudenSesonki();
     }
