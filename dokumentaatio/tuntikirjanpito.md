@@ -6,4 +6,5 @@ Päivä | Tunnit | Kuvaus
 16.09.2016 | 6h | Pakkausten, luokkien ja rajapintojen mietintää ja koodamista, raporttien generointi, repon päivitys
 23.09.2016 | 5h | Viikon aikaan saannoksien kokoaminen ja repoon siirto
 28.09.2016|5h| Luokkia ja pakkauksia päivitetty. Enum vakiot otettu käyttöön ja SesonkiNyt luokan if-hässäkkä poistettu
-...|...|...
+29.09.2016|4h|Luokkia lisätty ja osaa päivitetty
+30.09.2016 | 3h | javadoc aloitettu, repo päivitetty, luokkakaavio päivitetty
