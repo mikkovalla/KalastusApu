@@ -9,9 +9,9 @@ import saatila.saa.Tuuli;
 import org.junit.Before;
 import org.junit.Test;
 import static org.junit.Assert.*;
-import static saatila.saaEnum.Tuulensuunta.ETELÄ;
-import static saatila.saaEnum.Tuulensuunta.LOUNAS;
-import static saatila.saaEnum.Tuulensuunta.POHJOINEN;
+import static saatila.saaenum.Tuulensuunta.ETELÄ;
+import static saatila.saaenum.Tuulensuunta.LOUNAS;
+import static saatila.saaenum.Tuulensuunta.POHJOINEN;
 
 /**
  *
