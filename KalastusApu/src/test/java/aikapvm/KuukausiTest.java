@@ -18,6 +18,7 @@ public class KuukausiTest {
     private int kuukausi;
     Kuukausi k;
     GregorianCalendar kk;
+    Kuukaudet kn;
 
     @Before
     public void setUp() {
@@ -46,8 +47,20 @@ public class KuukausiTest {
 
     @Test
     public void setKuukausiAsettaaUudenArvon() {
+        k.setKuukausi(12);
+        assertEquals(k.getKuukausi(), 12);
+    }
+
+    @Test
+    public void setKuukausiEiVoiAsettaaVäärääArvoa() {
         k.setKuukausi(15);
-        assertEquals(k.getKuukausi(), 15);
+        assertEquals(k.getKuukausi(), 9);
+    }
+
+    @Test
+    public void getKuunNimiPalauttaaOikeanArvon() {
+        String kn = k.getKuuNimi().name();
+        assertEquals(k.getKuuNimi().toString(), kn);
     }
 
 }
