@@ -3,11 +3,12 @@ Tämä Main luokka on luotu vain testiä varten
  */
 package logiikka;
 
+import aikapvm.Kuukaudet;
 import aikapvm.Kuukausi;
 import alue.AlueValinta;
-import alue.Meri;
-import java.util.Scanner;
 import aikapvm.SesonkiNyt;
+import static alue.Vesi.JÄRVI;
+import static alue.Vesi.MERI;
 
 /**
  *
@@ -17,43 +18,27 @@ public class Main {
 
     //Testi Main luokka jolla testataan olioiden palauttamat arvot ennen logiikka luokkaa ja UI luokkaa
     public static void main(String[] args) {
+
         SesonkiNyt sn = new SesonkiNyt();
         Kuukausi kk = new Kuukausi();
+        AlueValinta av = new AlueValinta(MERI, "", 15, 10);
 
-        /*System.out.println("Anna alue missä kalastat: ");
-        System.out.println("Alue voi olla: Meri, Jarvi tai Joki.");
-
-        Scanner sc = new Scanner(System.in);
-        String mesta = sc.nextLine();
-        System.out.println("Mikä on veden väri?");
-        String vari = sc.nextLine();
-        System.out.println("Mikä on veden lämpö? ");
-        int lampo = Integer.parseInt(sc.nextLine());
-        System.out.println("Mikä on veden korkeus? ");
-        int korkeus = Integer.parseInt(sc.nextLine());
-
-        AlueValinta av = new AlueValinta(mesta, vari, lampo, korkeus);
         System.out.println(kk.getKuukausi()); // tulostaa 9
         System.out.println(sn.getSesonki()); // tulostaa Syksy
-        System.out.println(av.toString()); // tulostaa Meri, Järvi tai Joki riippuen käyttäjän syötteestä
+        System.out.println(av.toString()); // Tulostaa aluevalinta kohtaiset tiedot oletus veden värillä ja tiedolla MERI
 
-        av.setVedenVari(""); // testaa oletus veden värin
+        AlueValinta avJarvi = new AlueValinta(JÄRVI, "", 12, 0);
+        System.out.println(avJarvi.toString()); // tulostaa olion järvi parametrilla oletus veden värillä
+        avJarvi.setVedenVari("maitokahvi"); // testaa vedenväri setteri        
+        System.out.println(avJarvi.toString()); //tulostaa setterin asettamalla veden värillä
 
-        System.out.println(av.toString()); // tulostaa oletus veden värillä
-
-        Meri meri = new Meri("meri", "", 11, -15); //Luo uuden meri olion annetuilla parametreillä
-
-        System.out.println(meri.toString()); //tulostaa meri tiedot käyttäen yliluokan oletusvedenVari metodia
-
-        meri.setVedenVari("punainen");
-        meri.setVedenLampo(14);
-        meri.setVedenKorkeus(-10);
-
-        System.out.println(meri.toString()); //tulostaa meri olion tiedot uusilla parametreilla
-         */
         System.out.println(kk.getKuukausi());
         System.out.println(kk.toString());
-        
         System.out.println(sn.toString());
+
+        System.out.println(sn.getSesonki());
+
+        System.out.println(Kuukaudet.KESÄKUU.getKuukaudenSesonki());
+
     }
 }
