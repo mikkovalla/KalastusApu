@@ -5,11 +5,12 @@
  */
 package saatila.saa;
 
-import saatila.saaEnum.Tuulensuunta;
+import saatila.saaenum.Tuulensuunta;
 
 /**
  *
- * @author mikko
+ * Tuuli luokka jonka ilmentymä sisältää Tuulensuunta mukaisen Enum vakio arvon
+ sekä tuulen nopeuden.
  */
 public class Tuuli {
 

@@ -3,11 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package saatila.saaEnum;
+package saatila.saaenum;
 
 /**
  *
- * @author mikko
+ * Enum luokka Taivas joka määrittää pilvisyyden Enum vakioina.
  */
 public enum Taivas {
     AURINKOINEN, PILVINEN, PUOLIPILVINEN, SUMUINEN;

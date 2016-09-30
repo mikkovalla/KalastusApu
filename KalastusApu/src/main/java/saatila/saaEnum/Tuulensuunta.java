@@ -3,11 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package saatila.saaEnum;
+package saatila.saaenum;
 
 /**
  *
- * @author mikko
+ * Enum luokka Tuulensuunta joka määrittää tuulen suunnat ilmansuuntien mukaan
+ vakioina.
  */
 public enum Tuulensuunta {
     POHJOINEN, KOILLINEN, ITÄ, KAAKKO, ETELÄ, LOUNAS, LÄNSI, LUODE;
