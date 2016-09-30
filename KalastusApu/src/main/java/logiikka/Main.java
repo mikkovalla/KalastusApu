@@ -9,6 +9,8 @@ import alue.AlueValinta;
 import aikapvm.SesonkiNyt;
 import static alue.Vesi.JÄRVI;
 import static alue.Vesi.MERI;
+import static saatila.saaEnum.Tuulensuunta.ETELÄ;
+import saatila.saa.Tuuli;
 
 /**
  *
@@ -39,6 +41,9 @@ public class Main {
         System.out.println(sn.getSesonki());
 
         System.out.println(Kuukaudet.KESÄKUU.getKuukaudenSesonki());
+
+        Tuuli tuuli = new Tuuli(ETELÄ, 5);
+        System.out.println(tuuli.toString());
 
     }
 }
