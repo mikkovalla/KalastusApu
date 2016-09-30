@@ -57,14 +57,12 @@
                         <param>alue.*</param>
                         <param>kalalaji.*</param>
                         <param>saatila.*</param>
-                        <param>sesonki.*</param>
                     </targetClasses>
                     <targetTests>
                         <param>aikapvm.*</param>
                         <param>alue.*</param>
                         <param>kalalaji.*</param>
                         <param>saatila.*</param>
-                        <param>sesonki.*</param>
                     </targetTests>
                 </configuration>
             </plugin>
