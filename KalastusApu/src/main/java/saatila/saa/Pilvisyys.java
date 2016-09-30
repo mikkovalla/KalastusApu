@@ -5,11 +5,12 @@
  */
 package saatila.saa;
 
-import saatila.saaEnum.Taivas;
+import saatila.saaenum.Taivas;
 
 /**
  *
- * @author mikko
+ * Pilvisyys luokka jonka ilmentymä pitää sisällään pilvisyyden riippuen Taivas
+ Enum vakiosta.
  */
 public class Pilvisyys {
 

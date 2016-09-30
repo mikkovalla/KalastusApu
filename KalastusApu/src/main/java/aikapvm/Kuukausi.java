@@ -10,13 +10,19 @@ import java.util.GregorianCalendar;
 
 /**
  *
- * @author mikko
+ * Kuukausi luokka
  */
 public class Kuukausi {
 
     private int kuukausi;
     private Kuukaudet k;
 
+    /**
+     * Kuukausi luokan konstruktori. Konstruktori luo kuukausi olion tämän
+     * hetkisen kuukauden perusteella käyttämällä javan GregorianCalendar
+     * luokkaa. This.kuukausi + 1 tarvitaan jotta saadaan oikea kuukauden numero
+     *
+     */
     public Kuukausi() {
         GregorianCalendar kk = new GregorianCalendar();
         this.kuukausi = kk.get(Calendar.MONTH);
@@ -27,6 +33,12 @@ public class Kuukausi {
         return this.kuukausi;
     }
 
+    /**
+     *
+     * @param kk on int tyyppinen joka vastaa haluttua kuukautta.
+     *
+     * Metodissa if lause tarkistaa että kk muuttuja on arvoväliltä 1 ja 12.
+     */
     public void setKuukausi(int kk) {
 
         if (kk <= 12 && kk >= 1) {
@@ -36,6 +48,12 @@ public class Kuukausi {
         }
     }
 
+    /**
+     * Metodi käy läpi for loopilla Kuukaudet vakio arvot, ja if lause tarkistaa
+     * minkä vakio arvon numero vastaa kuukausi luokan this.kuukausi arvoa.
+     *
+     * @return kN vastaa Enum luokan Kuukaudet vakio arvoa.
+     */
     public Kuukaudet getKuuNimi() {
         for (Kuukaudet kN : Kuukaudet.values()) {
             if (kN.getKuukausiNumero() == getKuukausi()) {
@@ -44,6 +62,12 @@ public class Kuukausi {
         }
         return null;
     }
+
+    /**
+     * toString metodi luokalle Kuukausi
+     *
+     * @return kuukauden nimi ja numero.
+     */
 
     @Override
     public String toString() {

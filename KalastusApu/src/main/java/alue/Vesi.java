@@ -9,7 +9,8 @@ import aikapvm.SesonkiNyt;
 
 /**
  *
- * @author mikko
+ * Vesi Enum luokka joka asettaa vakio arvot MERI, JOKI ja JÄRVI, sekä niille
+ * sesongin mukaiset oletus veden värit.
  */
 public enum Vesi {
 
@@ -22,6 +23,18 @@ public enum Vesi {
     private String savyKesa;
     private String savySyksy;
 
+    /**
+     * Konstruktori joka asettaa Vakio arvolle oletusvedenvärit.
+     *
+     * @param savyTalvi asettaa String tyyppisenä oletus veden värin Talvi
+     * sesongille.
+     * @param savyKevat asettaa String tyyppisen oletus veden värin Kevät
+     * sesongille.
+     * @param savyKesa asettaa String tyyppisen oletus vedenvärin Kesä
+     * sesongille.
+     * @param savySyksy asettaa String tyyppisen oletus vedenvärin Syys
+     * sesongille.
+     */
     Vesi(String savyTalvi, String savyKevat, String savyKesa, String savySyksy) {
         this.savyTalvi = savyTalvi;
         this.savyKevat = savyKevat;
@@ -45,6 +58,16 @@ public enum Vesi {
         return this.savySyksy;
     }
 
+    /**
+     * Metodi palauttaa vakio arvolle annetun oletus vedenvärin sesongista
+     * riippuen. Sesonki tulee SesonkiNyt luokan ilmentymästä sn, ja Vesi luokan
+     * vakio arvo Vesi vesi arvosta. Metodi saa nämä parametreina.
+     *
+     * @param vesi on Enum luokan Vesi vakio
+     * @param sn SesonkiNyt luokan ilmentymä
+     * @return palauttaa vesi vakion metodin mukaisen string tyyppisen vedenväri
+     * arvon joka vastaa SesonkiNyt määrittelemää sesonkia.
+     */
     public String getSavySesonginMukaan(Vesi vesi, SesonkiNyt sn) {
         sn = new SesonkiNyt();
         switch (sn.getSesonki()) {

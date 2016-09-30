@@ -7,7 +7,9 @@ package aikapvm;
 
 /**
  *
- * @author mikko
+ * Kuukaudet Enum luokka tarjoaa Kuukaudet vakio arvoina, sekä kuukauden numeron
+ * ja Sesongin nimen. Tämä selventää huomattavasti kuukauden hakua ja sesongin
+ * hakua kuukauden perusteella.
  */
 public enum Kuukaudet {
 
@@ -18,15 +20,32 @@ public enum Kuukaudet {
     private int kuukausiNumero;
     private String sesonki;
 
+    /**
+     *
+     * @param kn on kuukauden numero joka asettaa kullekkin kuukauden arvolle
+     * tätä vastaavan numerollisen arvon.
+     * @param sesonki on String tyyppinen ja kertoo mikä sesonki vallitsee
+     * tietyn kuukauden aikana.
+     *
+     * Kuukaudet Enum luokan konstruktori.
+     */
     Kuukaudet(int kn, String sesonki) {
         this.kuukausiNumero = kn;
         this.sesonki = sesonki;
     }
 
+    /**
+     *
+     * Metodi palauttaa kuukauden numeron int tyyppisenä.
+     */
     public int getKuukausiNumero() {
         return this.kuukausiNumero;
     }
 
+    /**
+     *
+     * Metodi palauttaa kuukauden sesongin String muodossa.
+     */
     public String getKuukaudenSesonki() {
         return this.sesonki;
     }
