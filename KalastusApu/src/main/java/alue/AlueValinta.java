@@ -5,7 +5,7 @@
  */
 package alue;
 
-import aikapvm.Kuukausi;
+import aikapvm.SesonkiNyt;
 
 /**
  *
@@ -13,13 +13,14 @@ import aikapvm.Kuukausi;
  */
 public class AlueValinta implements Alue {
 
-    private String paikka;
+    private SesonkiNyt sn;
     private String vedenVari;
     private int vedenLampo;
     private int vedenKorkeus;
+    private Vesi vesi;
 
-    public AlueValinta(String paikka, String vari, int lampo, int korkeus) {
-        this.paikka = paikka;
+    public AlueValinta(Vesi vesi, String vari, int lampo, int korkeus) {
+        this.vesi = vesi;
         this.vedenVari = vari;
         this.vedenLampo = lampo;
         this.vedenKorkeus = korkeus;
@@ -27,7 +28,7 @@ public class AlueValinta implements Alue {
 
     @Override
     public String getAlue() {
-        return this.paikka;
+        return this.vesi.name();
     }
 
     public void setVedenVari(String vari) {
@@ -68,6 +69,11 @@ public class AlueValinta implements Alue {
     }
 
     @Override
+    public void oletusVedenVari() {
+        setVedenVari(vesi.getSavySesonginMukaan(vesi, sn));
+    }
+
+    @Override
     public String toString() {
         if (this.vedenKorkeus >= 1) {
             return "Alue on " + getAlue() + ", veden vari on " + vedenVari() + ", vedenlampö on " + vedenLampo() + ", ja vedenkorkeus on " + vedenKorkeus() + " senttimetriä plussalla";
@@ -75,51 +81,5 @@ public class AlueValinta implements Alue {
             return "Alue on " + getAlue() + ", veden vari on " + vedenVari() + ", vedenlampö on " + vedenLampo() + ", ja vedenkorkeus on " + vedenKorkeus() + " senttimetriä miinuksella";
         }
         return "Alue on " + getAlue() + ", veden vari on " + vedenVari() + ", vedenlampö on " + vedenLampo() + ", ja vedenkorkeus on " + vedenKorkeus() + " eli neutraali";
-    }
-
-    @Override
-    public void oletusVedenVari() {
-        Kuukausi kk = new Kuukausi();
-
-        if (this.paikka.equalsIgnoreCase("meri")) {
-            if (kk.getKuukausi() >= 1 || kk.getKuukausi() <= 2) {
-                setVedenVari("sinertävä");
-            }
-            if (kk.getKuukausi() >= 3 || kk.getKuukausi() <= 5) {
-                setVedenVari("vihertävä");
-            }
-            if (kk.getKuukausi() >= 6 || kk.getKuukausi() <= 8) {
-                setVedenVari("vihreä");
-            }
-            if (kk.getKuukausi() >= 9 || kk.getKuukausi() <= 12) {
-                setVedenVari("vihertävä");
-            }
-        } else if (this.paikka.equalsIgnoreCase("jarvi")) {
-            if (kk.getKuukausi() >= 1 || kk.getKuukausi() <= 2) {
-                setVedenVari("kirkas ruskea");
-            }
-            if (kk.getKuukausi() >= 3 || kk.getKuukausi() <= 5) {
-                setVedenVari("sinertävän ruskea");
-            }
-            if (kk.getKuukausi() >= 6 || kk.getKuukausi() <= 8) {
-                setVedenVari("humuksen ruskea");
-            }
-            if (kk.getKuukausi() >= 9 || kk.getKuukausi() <= 12) {
-                setVedenVari("vihertävä ruskea");
-            }
-        } else if (this.paikka.equalsIgnoreCase("joki")) {
-            if (kk.getKuukausi() >= 1 || kk.getKuukausi() <= 2) {
-                setVedenVari("kirkas humuksinen");
-            }
-            if (kk.getKuukausi() >= 3 || kk.getKuukausi() <= 5) {
-                setVedenVari("likainen ruskea");
-            }
-            if (kk.getKuukausi() >= 6 || kk.getKuukausi() <= 8) {
-                setVedenVari("humuksinen");
-            }
-            if (kk.getKuukausi() >= 9 || kk.getKuukausi() <= 12) {
-                setVedenVari("kirkas humuksinen");
-            }
-        }
     }
 }
