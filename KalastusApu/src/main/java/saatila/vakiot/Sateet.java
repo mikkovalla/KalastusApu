@@ -3,12 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package saatila.saaenum;
+package saatila.vakiot;
 
 /**
  *
  * Enum luokka jossa sade tyypit vakio arvoina.
  */
 public enum Sateet {
-    VESI, RÄNTÄ, LUMI;
+    VESI, RÄNTÄ, LUMI, VESITIHKU, POUTA;
 }

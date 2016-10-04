@@ -5,7 +5,7 @@
  */
 package saatila.saa;
 
-import saatila.saaenum.Taivas;
+import saatila.vakiot.Taivas;
 
 /**
  *

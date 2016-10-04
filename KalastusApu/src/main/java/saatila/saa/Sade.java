@@ -5,7 +5,7 @@
  */
 package saatila.saa;
 
-import saatila.saaenum.Sateet;
+import saatila.vakiot.Sateet;
 
 /**
  *

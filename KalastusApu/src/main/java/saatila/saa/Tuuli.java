@@ -5,7 +5,7 @@
  */
 package saatila.saa;
 
-import saatila.saaenum.Tuulensuunta;
+import saatila.vakiot.Tuulensuunta;
 
 /**
  *
