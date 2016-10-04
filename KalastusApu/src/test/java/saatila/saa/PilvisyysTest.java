@@ -8,10 +8,10 @@ package saatila.saa;
 import org.junit.Before;
 import org.junit.Test;
 import static org.junit.Assert.*;
-import saatila.saaenum.Taivas;
-import static saatila.saaenum.Taivas.AURINKOINEN;
-import static saatila.saaenum.Taivas.PILVINEN;
-import static saatila.saaenum.Taivas.PUOLIPILVINEN;
+import saatila.vakiot.Taivas;
+import static saatila.vakiot.Taivas.AURINKOINEN;
+import static saatila.vakiot.Taivas.PILVINEN;
+import static saatila.vakiot.Taivas.PUOLIPILVINEN;
 
 /**
  *

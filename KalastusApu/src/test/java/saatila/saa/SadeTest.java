@@ -8,9 +8,9 @@ package saatila.saa;
 import org.junit.Before;
 import org.junit.Test;
 import static org.junit.Assert.*;
-import saatila.saaenum.Sateet;
-import static saatila.saaenum.Sateet.LUMI;
-import static saatila.saaenum.Sateet.VESI;
+import saatila.vakiot.Sateet;
+import static saatila.vakiot.Sateet.LUMI;
+import static saatila.vakiot.Sateet.VESI;
 
 /**
  *

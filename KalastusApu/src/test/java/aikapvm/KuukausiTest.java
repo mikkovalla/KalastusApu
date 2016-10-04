@@ -30,19 +30,19 @@ public class KuukausiTest {
     @Test
     public void konstruktoriPalauttaaKalenteriKuukaudenNumerona() {
         this.kuukausi = kk.get(Calendar.MONTH);
-        assertEquals(this.kuukausi, 8); //testi syyskuussa
+        assertEquals(this.kuukausi, 9); //testi syyskuussa
     }
 
     @Test
     public void konstruktoriAsettaaOikeanKuukauden() {
         this.kuukausi = kk.get(Calendar.MONTH);
         this.kuukausi = this.kuukausi + 1;
-        assertEquals(this.kuukausi, 9);
+        assertEquals(this.kuukausi, 10);
     }
 
     @Test
     public void getKuukausiPalauttaaOikeanArvon() {
-        assertEquals(k.getKuukausi(), 9);
+        assertEquals(k.getKuukausi(), 10);
     }
 
     @Test
@@ -54,7 +54,7 @@ public class KuukausiTest {
     @Test
     public void setKuukausiEiVoiAsettaaVäärääArvoa() {
         k.setKuukausi(15);
-        assertEquals(k.getKuukausi(), 9);
+        assertEquals(k.getKuukausi(), 10);
     }
 
     @Test
