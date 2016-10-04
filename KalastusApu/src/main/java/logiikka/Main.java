@@ -9,8 +9,13 @@ import alue.AlueValinta;
 import aikapvm.SesonkiNyt;
 import static alue.Vesi.JÄRVI;
 import static alue.Vesi.MERI;
-import static saatila.saaenum.Tuulensuunta.ETELÄ;
+import saatila.logiikka.SaaNyt;
+import saatila.saa.Pilvisyys;
+import saatila.saa.Sade;
+import static saatila.vakiot.Tuulensuunta.ETELÄ;
 import saatila.saa.Tuuli;
+import static saatila.vakiot.Sateet.POUTA;
+import static saatila.vakiot.Taivas.AURINKOINEN;
 
 /**
  *
@@ -24,26 +29,11 @@ public class Main {
         SesonkiNyt sn = new SesonkiNyt();
         Kuukausi kk = new Kuukausi();
         AlueValinta av = new AlueValinta(MERI, "", 15, 10);
+        Tuuli t = new Tuuli(ETELÄ, 5);
+        Pilvisyys p = new Pilvisyys(AURINKOINEN);
+        Sade s = new Sade(POUTA);
+        SaaNyt saa = new SaaNyt(p, s, t);
 
-        System.out.println(kk.getKuukausi()); // tulostaa 9
-        System.out.println(sn.getSesonki()); // tulostaa Syksy
-        System.out.println(av.toString()); // Tulostaa aluevalinta kohtaiset tiedot oletus veden värillä ja tiedolla MERI
-
-        AlueValinta avJarvi = new AlueValinta(JÄRVI, "", 12, 0);
-        System.out.println(avJarvi.toString()); // tulostaa olion järvi parametrilla oletus veden värillä
-        avJarvi.setVedenVari("maitokahvi"); // testaa vedenväri setteri        
-        System.out.println(avJarvi.toString()); //tulostaa setterin asettamalla veden värillä
-
-        System.out.println(kk.getKuukausi());
-        System.out.println(kk.toString());
-        System.out.println(sn.toString());
-
-        System.out.println(sn.getSesonki());
-
-        System.out.println(Kuukaudet.KESÄKUU.getKuukaudenSesonki());
-
-        Tuuli tuuli = new Tuuli(ETELÄ, 5);
-        System.out.println(tuuli.toString());
-
+        System.out.println(sn.toString() + "\n" + av.toString() + "\n" + saa.toString());
     }
 }
