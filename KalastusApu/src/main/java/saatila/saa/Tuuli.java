@@ -10,13 +10,20 @@ import saatila.vakiot.Tuulensuunta;
 /**
  *
  * Tuuli luokka jonka ilmentymä sisältää Tuulensuunta mukaisen Enum vakio arvon
- sekä tuulen nopeuden.
+ * sekä tuulen nopeuden.
  */
 public class Tuuli {
 
     private Tuulensuunta suunta;
     private int nopeus;
 
+    /**
+     * Tuuli luokan konstruktori.
+     *
+     * @param suunta vakio arvo.
+     * @param nopeus int arvo.
+     * @see saatila.vakiot.Tuulensuunta.
+     */
     public Tuuli(Tuulensuunta suunta, int nopeus) {
         this.suunta = suunta;
         this.nopeus = nopeus;

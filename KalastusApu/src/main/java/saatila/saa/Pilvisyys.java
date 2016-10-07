@@ -10,12 +10,18 @@ import saatila.vakiot.Taivas;
 /**
  *
  * Pilvisyys luokka jonka ilmentymä pitää sisällään pilvisyyden riippuen Taivas
- Enum vakiosta.
+ * Enum vakiosta.
  */
 public class Pilvisyys {
 
     private Taivas taivas;
 
+    /**
+     * Pilvisyys luokan konstruktori joka asettaa vakio arvon.
+     *
+     * @param taivas vakio
+     * @see saatila.vakiot.Taivas.
+     */
     public Pilvisyys(Taivas taivas) {
         this.taivas = taivas;
     }

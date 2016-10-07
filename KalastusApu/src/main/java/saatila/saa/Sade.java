@@ -15,16 +15,32 @@ public class Sade {
 
     private Sateet sateet;
 
+    /**
+     * Sade luokan konstruktori.
+     *
+     * @param sateet vakio arvo.
+     * @see saatila.vakiot.Sateet.
+     */
     public Sade(Sateet sateet) {
         this.sateet = sateet;
     }
 
+    /**
+     * setSade metodi. Testaa että parametri on oikea ehto lauseessa.
+     *
+     * @param st vakio arvo.
+     */
     public void setSade(Sateet st) {
         if (st.equals(sateet.LUMI) || st.equals(sateet.VESI) || st.equals(sateet.RÄNTÄ)) {
             this.sateet = st;
         }
     }
 
+    /**
+     * getSade metodi. Metodi antaa sateen vakion.
+     *
+     * @return Sateet vkio arvon.
+     */
     public Sateet getSade() {
         return this.sateet;
     }
