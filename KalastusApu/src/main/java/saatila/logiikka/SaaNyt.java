@@ -12,8 +12,6 @@ import saatila.saa.Tuuli;
 /**
  * Luokan SaaNyt tarkoitus on kerätä yhteen luokan ilmentymään säätilaa koskevat
  * tiedot.
- *
- * @author mikko
  */
 public class SaaNyt {
 
@@ -21,12 +19,37 @@ public class SaaNyt {
     private Sade sade;
     private Tuuli tuuli;
 
+    /**
+     * Konstruktori luo ajankohtaisen sää olion käyttäjän antamilla vakio
+     * arvoilla.
+     *
+     * @param pilvet vakio arvo.
+     * @see saatila.saa.Pilvisyys.
+     *
+     * @param sade vakio arvo.
+     * @see saatila.saa.Sade.
+     *
+     * @param tuuli vakio arvo.
+     * @see saatila.saa.Tuuli.
+     */
     public SaaNyt(Pilvisyys pilvet, Sade sade, Tuuli tuuli) {
         this.pilvet = pilvet;
         this.sade = sade;
         this.tuuli = tuuli;
     }
 
+    /**
+     * SaaNyt setteri joka asettaa uudet käyttäjän antamat vakio arvot.
+     *
+     * @param p vakio arvo.
+     * @see saatila.saa.Pilvisyys.
+     *
+     * @param s vakio arvo.
+     * @see saatila.saa.Sade.
+     *
+     * @param t vakio arvo.
+     * @see saatila.saa.Tuuli.
+     */
     public void setSaaNyt(Pilvisyys p, Sade s, Tuuli t) {
         this.pilvet = p;
         this.sade = s;
