@@ -14,7 +14,7 @@ public class SesonkiNyt {
     private Kuukausi kk;
 
     /**
-     * Luokan konstruktorissa luodaan uusi Kuukausi luokan ilmentymä
+     * Luokan konstruktorissa luodaan uusi Kuukausi luokan ilmentymä.
      */
     public SesonkiNyt() {
         kk = new Kuukausi();
@@ -30,7 +30,7 @@ public class SesonkiNyt {
     }
 
     /**
-     * SesonkiNyt luokan toString metodi
+     * SesonkiNyt luokan toString metodi.
      *
      * @return ehdon mukaan kuukausi sekä sesonki missä sesongin nimeen on
      * liitetty 'n' kirjain ellei sesonki ole TALVI tai KEVÄT.
