@@ -25,7 +25,7 @@ under the License.
     <language>en-us</language>
     <copyright>&#169;2016</copyright>
     <item>
-      <title>File: 20,
+      <title>File: 21,
              Errors: 0,
              Warnings: 0,
              Infos: 0
@@ -88,35 +88,7 @@ under the License.
               </tr>
                           <tr>
                 <td>
-                  <a href="${project.url}/checkstyle.html#kalalaji.Kalalaji.java">kalalaji/Kalalaji.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="${project.url}/checkstyle.html#kalalaji.Kala.java">kalalaji/Kala.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="${project.url}/checkstyle.html#saatila.saaEnum.Sateet.java">saatila/saaEnum/Sateet.java</a>
+                  <a href="${project.url}/checkstyle.html#kalalaji.esiintyminen.HaukiEsiintyminen.java">kalalaji/esiintyminen/HaukiEsiintyminen.java</a>
                 </td>
                 <td>
                   0
@@ -144,34 +116,6 @@ under the License.
               </tr>
                           <tr>
                 <td>
-                  <a href="${project.url}/checkstyle.html#kalalaji.Hauki.java">kalalaji/Hauki.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="${project.url}/checkstyle.html#kalalaji.Taimen.java">kalalaji/Taimen.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-              </tr>
-                          <tr>
-                <td>
                   <a href="${project.url}/checkstyle.html#alue.Vesi.java">alue/Vesi.java</a>
                 </td>
                 <td>
@@ -186,7 +130,21 @@ under the License.
               </tr>
                           <tr>
                 <td>
-                  <a href="${project.url}/checkstyle.html#kalalaji.Ahven.java">kalalaji/Ahven.java</a>
+                  <a href="${project.url}/checkstyle.html#kalalaji.esiintyminen.Esiintyminen.java">kalalaji/esiintyminen/Esiintyminen.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="${project.url}/checkstyle.html#kalalaji.logiikka.Kala.java">kalalaji/logiikka/Kala.java</a>
                 </td>
                 <td>
                   0
@@ -214,6 +172,20 @@ under the License.
               </tr>
                           <tr>
                 <td>
+                  <a href="${project.url}/checkstyle.html#kalalaji.kalastustapa.HaukiKalastus.java">kalalaji/kalastustapa/HaukiKalastus.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
                   <a href="${project.url}/checkstyle.html#aikapvm.SesonkiNyt.java">aikapvm/SesonkiNyt.java</a>
                 </td>
                 <td>
@@ -228,7 +200,21 @@ under the License.
               </tr>
                           <tr>
                 <td>
-                  <a href="${project.url}/checkstyle.html#kalalaji.Kuha.java">kalalaji/Kuha.java</a>
+                  <a href="${project.url}/checkstyle.html#kalalaji.kalat.Kalat.java">kalalaji/kalat/Kalat.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="${project.url}/checkstyle.html#kalalaji.logiikka.Kalalaji.java">kalalaji/logiikka/Kalalaji.java</a>
                 </td>
                 <td>
                   0
@@ -270,6 +256,62 @@ under the License.
               </tr>
                           <tr>
                 <td>
+                  <a href="${project.url}/checkstyle.html#saatila.vakiot.Sateet.java">saatila/vakiot/Sateet.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="${project.url}/checkstyle.html#saatila.vakiot.Taivas.java">saatila/vakiot/Taivas.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="${project.url}/checkstyle.html#kalalaji.kalastustapa.Kalastustapa.java">kalalaji/kalastustapa/Kalastustapa.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="${project.url}/checkstyle.html#saatila.vakiot.Tuulensuunta.java">saatila/vakiot/Tuulensuunta.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
                   <a href="${project.url}/checkstyle.html#aikapvm.Kuukausi.java">aikapvm/Kuukausi.java</a>
                 </td>
                 <td>
@@ -285,34 +327,6 @@ under the License.
                           <tr>
                 <td>
                   <a href="${project.url}/checkstyle.html#alue.AlueValinta.java">alue/AlueValinta.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="${project.url}/checkstyle.html#saatila.saaEnum.Taivas.java">saatila/saaEnum/Taivas.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="${project.url}/checkstyle.html#saatila.saaEnum.Tuulensuunta.java">saatila/saaEnum/Tuulensuunta.java</a>
                 </td>
                 <td>
                   0

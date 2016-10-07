@@ -1,0 +1,131 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fi_FI" lang="fi_FI">
+<head><meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<title>HaukiEsiintyminen xref</title>
+<link type="text/css" rel="stylesheet" href="../../stylesheet.css" />
+</head>
+<body>
+<div id="overview"><a href="../../../apidocs/kalalaji/esiintyminen/HaukiEsiintyminen.html">View Javadoc</a></div><pre>
+<a class="jxr_linenumber" name="L1" href="#L1">1</a>   <em class="jxr_comment">/*</em>
+<a class="jxr_linenumber" name="L2" href="#L2">2</a>   <em class="jxr_comment"> * To change this license header, choose License Headers in Project Properties.</em>
+<a class="jxr_linenumber" name="L3" href="#L3">3</a>   <em class="jxr_comment"> * To change this template file, choose Tools | Templates</em>
+<a class="jxr_linenumber" name="L4" href="#L4">4</a>   <em class="jxr_comment"> * and open the template in the editor.</em>
+<a class="jxr_linenumber" name="L5" href="#L5">5</a>   <em class="jxr_comment"> */</em>
+<a class="jxr_linenumber" name="L6" href="#L6">6</a>   <strong class="jxr_keyword">package</strong> kalalaji.esiintyminen;
+<a class="jxr_linenumber" name="L7" href="#L7">7</a>   
+<a class="jxr_linenumber" name="L8" href="#L8">8</a>   <strong class="jxr_keyword">import</strong> aikapvm.SesonkiNyt;
+<a class="jxr_linenumber" name="L9" href="#L9">9</a>   
+<a class="jxr_linenumber" name="L10" href="#L10">10</a>  <em class="jxr_javadoccomment">/**</em>
+<a class="jxr_linenumber" name="L11" href="#L11">11</a>  <em class="jxr_javadoccomment"> * Vakio luokka josta selviää Haukien esiintymisalueet sesongin mukaan merellä.</em>
+<a class="jxr_linenumber" name="L12" href="#L12">12</a>  <em class="jxr_javadoccomment"> *</em>
+<a class="jxr_linenumber" name="L13" href="#L13">13</a>  <em class="jxr_javadoccomment"> * @author mikko</em>
+<a class="jxr_linenumber" name="L14" href="#L14">14</a>  <em class="jxr_javadoccomment"> */</em>
+<a class="jxr_linenumber" name="L15" href="#L15">15</a>  <strong class="jxr_keyword">public</strong> enum <a href="../../kalalaji/esiintyminen/HaukiEsiintyminen.html">HaukiEsiintyminen</a> <strong class="jxr_keyword">implements</strong> <a href="../../kalalaji/esiintyminen/Esiintyminen.html">Esiintyminen</a> {
+<a class="jxr_linenumber" name="L16" href="#L16">16</a>      HAUKI(<span class="jxr_string">"Talvella, hauki kuten muutkin kalat säästää energiaa,\n "</span>
+<a class="jxr_linenumber" name="L17" href="#L17">17</a>              + <span class="jxr_string">"ja syö yleisesti suurempia saaliskaloja. \n"</span>
+<a class="jxr_linenumber" name="L18" href="#L18">18</a>              + <span class="jxr_string">"Hauki esiintyy alkutalvesta hyvinkin matalassa vedessä saalistamassa säyneitä, \n"</span>
+<a class="jxr_linenumber" name="L19" href="#L19">19</a>              + <span class="jxr_string">"kuhia, ahvenia ja lahnoja. Keskitalvella hauet vetäytyvät syvemmälle, \n"</span>
+<a class="jxr_linenumber" name="L20" href="#L20">20</a>              + <span class="jxr_string">"yleisesti kutualueiden lähellä oleviin syvänteihin. \n"</span>
+<a class="jxr_linenumber" name="L21" href="#L21">21</a>              + <span class="jxr_string">"Lopputalvesta hauet taas alkavat siirtyä matalampaan veteen kutu-alueen ympärille, \n"</span>
+<a class="jxr_linenumber" name="L22" href="#L22">22</a>              + <span class="jxr_string">"ja aloittavat syömään enemmän saadakseen energiaa lähestyvää kutua varten. \n"</span>
+<a class="jxr_linenumber" name="L23" href="#L23">23</a>              + <span class="jxr_string">"Pääasialliset saaliskalat lopputalvesta ovat kudulle tulleet ahvenet, lahnat ja säyneet. \n"</span>
+<a class="jxr_linenumber" name="L24" href="#L24">24</a>              + <span class="jxr_string">"Talvella otollisin kalastusaika on valoisaan aikaan.\n"</span>, <em class="jxr_comment">//Talvi essintyminen loppuu, Kevät alkaa</em>
+<a class="jxr_linenumber" name="L25" href="#L25">25</a>              <span class="jxr_string">"Alku keväällä alkaa hauen kutu, mutta juuri sitä ennen pääsääntöisesti isoimmat hauet tavoittaa 2-6 metrin syvyydestä \n"</span>
+<a class="jxr_linenumber" name="L26" href="#L26">26</a>              + <span class="jxr_string">"kutualueiden suulta jossa ne saalistavat ahnaasti säyneitä ja muita särkikaloja, \n"</span>
+<a class="jxr_linenumber" name="L27" href="#L27">27</a>              + <span class="jxr_string">"ja keskikokoiset hauet oleskelevat lähempänä rantaa. \n"</span>
+<a class="jxr_linenumber" name="L28" href="#L28">28</a>              + <span class="jxr_string">"Kudun aikana hauet eivät aktiivisesti syö.\n"</span>
+<a class="jxr_linenumber" name="L29" href="#L29">29</a>              + <span class="jxr_string">"Kevään edetessä kohti alkukesää, hauet aloittavat rankan ruokailun palauttaakseen kuntonsa kudun jälkeen. \n"</span>
+<a class="jxr_linenumber" name="L30" href="#L30">30</a>              + <span class="jxr_string">"Tällöin hauet löytää särkikalojen kutupaikoilta rantojen läheisyydestä, \n"</span>
+<a class="jxr_linenumber" name="L31" href="#L31">31</a>              + <span class="jxr_string">"sekä kuhien kutualueiden ympäriltä. Toisin kuin yleensä luullaan, \n"</span>
+<a class="jxr_linenumber" name="L32" href="#L32">32</a>              + <span class="jxr_string">"keväällä hauet liikkuvat hyvin paljon saaliskalojen perässä, \n"</span>
+<a class="jxr_linenumber" name="L33" href="#L33">33</a>              + <span class="jxr_string">"ja onkin yleistä saada lukuisia kaloja pieneltä alueelta. \n"</span>
+<a class="jxr_linenumber" name="L34" href="#L34">34</a>              + <span class="jxr_string">"Keväällä kalastus kannattaa aloittaa juuri ennen auringon nousua, \n"</span>
+<a class="jxr_linenumber" name="L35" href="#L35">35</a>              + <span class="jxr_string">"ja lopettaa vasta noin tunnin auringon laskun jälkeen. \n"</span>
+<a class="jxr_linenumber" name="L36" href="#L36">36</a>              + <span class="jxr_string">"Keväällä ei ole todettu olevan erityistä syöntiaikaa vaan hetkellisiä, \n"</span>
+<a class="jxr_linenumber" name="L37" href="#L37">37</a>              + <span class="jxr_string">"muutaman tunnin kestäviä syöntipiikkejä.\n"</span>, <em class="jxr_comment">//Kevät esiintyminen loppuu, Kesä alkaa</em>
+<a class="jxr_linenumber" name="L38" href="#L38">38</a>              <span class="jxr_string">"Kesällä hauet hajaantuvat ja voivat liikkua pitkiäkin matkoja. \n"</span>
+<a class="jxr_linenumber" name="L39" href="#L39">39</a>              + <span class="jxr_string">"Tällöin suurimmat yksilöt esiintyvät pääsääntöisesti selkävesiltä, \n"</span>
+<a class="jxr_linenumber" name="L40" href="#L40">40</a>              + <span class="jxr_string">"syvempien lahtien edustoilta, sekä suvantojen reunoilta. \n"</span>
+<a class="jxr_linenumber" name="L41" href="#L41">41</a>              + <span class="jxr_string">"Sesongille tyypillistä on saada hyvinkin laihoja ja pitkiä kaloja rantojen läheisyydestä, \n"</span>
+<a class="jxr_linenumber" name="L42" href="#L42">42</a>              + <span class="jxr_string">"kun taas syvemmiltä selkävesiltä saadut kalat ovat lyhyitä ja paksuja. \n"</span>
+<a class="jxr_linenumber" name="L43" href="#L43">43</a>              + <span class="jxr_string">"Selkävesien ja suvantojen pohjassa olevat kummut (tai ’pakat’) \n"</span>
+<a class="jxr_linenumber" name="L44" href="#L44">44</a>              + <span class="jxr_string">"ja niiden ympäristöt ovat potentiaalisimpia ison hauen paikkoja. \n"</span>
+<a class="jxr_linenumber" name="L45" href="#L45">45</a>              + <span class="jxr_string">"Rantojen lähellä kalat oleskelevat paikoissa missä on yleensä ainakin hieman virtausta.\n"</span>, <em class="jxr_comment">//Kesä esiintyminen loppuu, Syksy alkaa</em>
+<a class="jxr_linenumber" name="L46" href="#L46">46</a>              <span class="jxr_string">"Loppukesällä ja alkusyksyllä, hauet alkavat siirtyä lähemmäs rantoja, \n"</span>
+<a class="jxr_linenumber" name="L47" href="#L47">47</a>              + <span class="jxr_string">"ja niitä löytää kasvavissa määrin salmien suulta mihin salakat, ahvenet ja särkikalat alkavat parveutua. \n"</span>
+<a class="jxr_linenumber" name="L48" href="#L48">48</a>              + <span class="jxr_string">"Hauet voivat olla syvässäkin vedessä, ja onkin tyypillistä nähdä kaikuluotaimessa suuria parvia pikkukalaa \n"</span>
+<a class="jxr_linenumber" name="L49" href="#L49">49</a>              + <span class="jxr_string">"ja niiden alla isoja yksittäisiä kaikuja. Tämä sesonki jatkuu Marraskuun loppuun asti, \n"</span>
+<a class="jxr_linenumber" name="L50" href="#L50">50</a>              + <span class="jxr_string">"ja mitä myöhempään sesongissa mennään, sitä lähemmäs rantoja ja matalampaan veteen kalat siirtyvät. \n"</span>
+<a class="jxr_linenumber" name="L51" href="#L51">51</a>              + <span class="jxr_string">"Toinen tyypillisyys syys sesongissa on löytää pienempiä sekä keskikokoisia haukia salmista, \n"</span>
+<a class="jxr_linenumber" name="L52" href="#L52">52</a>              + <span class="jxr_string">"tai saarten/luotojen/ kivikoiden rannoista hyvinkin matalasta vedestä. \n"</span>); <em class="jxr_comment">//Syksy esiintyminen loppu</em>
+<a class="jxr_linenumber" name="L53" href="#L53">53</a>  
+<a class="jxr_linenumber" name="L54" href="#L54">54</a>      <strong class="jxr_keyword">private</strong> String talvi;
+<a class="jxr_linenumber" name="L55" href="#L55">55</a>      <strong class="jxr_keyword">private</strong> String kevat;
+<a class="jxr_linenumber" name="L56" href="#L56">56</a>      <strong class="jxr_keyword">private</strong> String kesa;
+<a class="jxr_linenumber" name="L57" href="#L57">57</a>      <strong class="jxr_keyword">private</strong> String syksy;
+<a class="jxr_linenumber" name="L58" href="#L58">58</a>      <strong class="jxr_keyword">private</strong> <a href="../../kalalaji/esiintyminen/HaukiEsiintyminen.html">HaukiEsiintyminen</a> hauki;
+<a class="jxr_linenumber" name="L59" href="#L59">59</a>  
+<a class="jxr_linenumber" name="L60" href="#L60">60</a>      <em class="jxr_javadoccomment">/**</em>
+<a class="jxr_linenumber" name="L61" href="#L61">61</a>  <em class="jxr_javadoccomment">     * Luokan konstruktorissa määritetään vakio esiintymiset</em>
+<a class="jxr_linenumber" name="L62" href="#L62">62</a>  <em class="jxr_javadoccomment">     *</em>
+<a class="jxr_linenumber" name="L63" href="#L63">63</a>  <em class="jxr_javadoccomment">     * @param esTalvi on talvi esiintyminen String tyyppisenä</em>
+<a class="jxr_linenumber" name="L64" href="#L64">64</a>  <em class="jxr_javadoccomment">     * @param esKevat on Kevät esiintyminen String tyyppisenä</em>
+<a class="jxr_linenumber" name="L65" href="#L65">65</a>  <em class="jxr_javadoccomment">     * @param esKesa on Kesä esiintyminen String tyyppisenä</em>
+<a class="jxr_linenumber" name="L66" href="#L66">66</a>  <em class="jxr_javadoccomment">     * @param esSyksy on Syys esiintyminen String tyyppisenä</em>
+<a class="jxr_linenumber" name="L67" href="#L67">67</a>  <em class="jxr_javadoccomment">     */</em>
+<a class="jxr_linenumber" name="L68" href="#L68">68</a>      <a href="../../kalalaji/esiintyminen/HaukiEsiintyminen.html">HaukiEsiintyminen</a>(String esTalvi, String esKevat, String esKesa, String esSyksy) {
+<a class="jxr_linenumber" name="L69" href="#L69">69</a>          <strong class="jxr_keyword">this</strong>.talvi = esTalvi;
+<a class="jxr_linenumber" name="L70" href="#L70">70</a>          <strong class="jxr_keyword">this</strong>.kevat = esKevat;
+<a class="jxr_linenumber" name="L71" href="#L71">71</a>          <strong class="jxr_keyword">this</strong>.kesa = esKesa;
+<a class="jxr_linenumber" name="L72" href="#L72">72</a>          <strong class="jxr_keyword">this</strong>.syksy = esSyksy;
+<a class="jxr_linenumber" name="L73" href="#L73">73</a>      }
+<a class="jxr_linenumber" name="L74" href="#L74">74</a>  
+<a class="jxr_linenumber" name="L75" href="#L75">75</a>      @Override
+<a class="jxr_linenumber" name="L76" href="#L76">76</a>      <strong class="jxr_keyword">public</strong> String getTalviEsiintyminen() {
+<a class="jxr_linenumber" name="L77" href="#L77">77</a>          <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">this</strong>.talvi;
+<a class="jxr_linenumber" name="L78" href="#L78">78</a>      }
+<a class="jxr_linenumber" name="L79" href="#L79">79</a>  
+<a class="jxr_linenumber" name="L80" href="#L80">80</a>      @Override
+<a class="jxr_linenumber" name="L81" href="#L81">81</a>      <strong class="jxr_keyword">public</strong> String getKevatEsiintyminen() {
+<a class="jxr_linenumber" name="L82" href="#L82">82</a>          <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">this</strong>.kevat;
+<a class="jxr_linenumber" name="L83" href="#L83">83</a>      }
+<a class="jxr_linenumber" name="L84" href="#L84">84</a>  
+<a class="jxr_linenumber" name="L85" href="#L85">85</a>      @Override
+<a class="jxr_linenumber" name="L86" href="#L86">86</a>      <strong class="jxr_keyword">public</strong> String getKesaEsiintyminen() {
+<a class="jxr_linenumber" name="L87" href="#L87">87</a>          <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">this</strong>.kesa;
+<a class="jxr_linenumber" name="L88" href="#L88">88</a>      }
+<a class="jxr_linenumber" name="L89" href="#L89">89</a>  
+<a class="jxr_linenumber" name="L90" href="#L90">90</a>      @Override
+<a class="jxr_linenumber" name="L91" href="#L91">91</a>      <strong class="jxr_keyword">public</strong> String getSyksyEsiintyminen() {
+<a class="jxr_linenumber" name="L92" href="#L92">92</a>          <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">this</strong>.syksy;
+<a class="jxr_linenumber" name="L93" href="#L93">93</a>      }
+<a class="jxr_linenumber" name="L94" href="#L94">94</a>  
+<a class="jxr_linenumber" name="L95" href="#L95">95</a>      <em class="jxr_javadoccomment">/**</em>
+<a class="jxr_linenumber" name="L96" href="#L96">96</a>  <em class="jxr_javadoccomment">     * Metodi vakion määrittelemän kalan esiintymisen hakuun sesongin mukaan.</em>
+<a class="jxr_linenumber" name="L97" href="#L97">97</a>  <em class="jxr_javadoccomment">     *</em>
+<a class="jxr_linenumber" name="L98" href="#L98">98</a>  <em class="jxr_javadoccomment">     * @param es Esiintyminen rajapinta.</em>
+<a class="jxr_linenumber" name="L99" href="#L99">99</a>  <em class="jxr_javadoccomment">     * @param sn SesonkiNyt olio.</em>
+<a class="jxr_linenumber" name="L100" href="#L100">100</a> <em class="jxr_javadoccomment">     * @return Vakio arvon esiintymisen sesongin mukaan String tyyppisenä.</em>
+<a class="jxr_linenumber" name="L101" href="#L101">101</a> <em class="jxr_javadoccomment">     */</em>
+<a class="jxr_linenumber" name="L102" href="#L102">102</a>     @Override
+<a class="jxr_linenumber" name="L103" href="#L103">103</a>     <strong class="jxr_keyword">public</strong> String esiintyySesonginMukaan(<a href="../../kalalaji/esiintyminen/Esiintyminen.html">Esiintyminen</a> es, <a href="../../aikapvm/SesonkiNyt.html">SesonkiNyt</a> sn) {
+<a class="jxr_linenumber" name="L104" href="#L104">104</a>         sn = <strong class="jxr_keyword">new</strong> <a href="../../aikapvm/SesonkiNyt.html">SesonkiNyt</a>();
+<a class="jxr_linenumber" name="L105" href="#L105">105</a>         <strong class="jxr_keyword">switch</strong> (sn.getSesonki()) {
+<a class="jxr_linenumber" name="L106" href="#L106">106</a>             <strong class="jxr_keyword">case</strong> <span class="jxr_string">"TALVI"</span>:
+<a class="jxr_linenumber" name="L107" href="#L107">107</a>                 <strong class="jxr_keyword">return</strong> es.getTalviEsiintyminen();
+<a class="jxr_linenumber" name="L108" href="#L108">108</a>             <strong class="jxr_keyword">case</strong> <span class="jxr_string">"KEVÄT"</span>:
+<a class="jxr_linenumber" name="L109" href="#L109">109</a>                 <strong class="jxr_keyword">return</strong> es.getKevatEsiintyminen();
+<a class="jxr_linenumber" name="L110" href="#L110">110</a>             <strong class="jxr_keyword">case</strong> <span class="jxr_string">"KESÄ"</span>:
+<a class="jxr_linenumber" name="L111" href="#L111">111</a>                 <strong class="jxr_keyword">return</strong> es.getKesaEsiintyminen();
+<a class="jxr_linenumber" name="L112" href="#L112">112</a>             <strong class="jxr_keyword">case</strong> <span class="jxr_string">"SYKSY"</span>:
+<a class="jxr_linenumber" name="L113" href="#L113">113</a>                 <strong class="jxr_keyword">return</strong> es.getSyksyEsiintyminen();
+<a class="jxr_linenumber" name="L114" href="#L114">114</a>             <strong class="jxr_keyword">default</strong>:
+<a class="jxr_linenumber" name="L115" href="#L115">115</a>                 <strong class="jxr_keyword">return</strong> <span class="jxr_string">"Jotain meni pieleen."</span>;
+<a class="jxr_linenumber" name="L116" href="#L116">116</a>         }
+<a class="jxr_linenumber" name="L117" href="#L117">117</a>     }
+<a class="jxr_linenumber" name="L118" href="#L118">118</a> }
+</pre>
+<hr/>
+<div id="footer">Copyright &#169; 2016. All rights reserved.</div>
+</body>
+</html>
