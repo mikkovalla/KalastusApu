@@ -16,12 +16,32 @@ import aikapvm.SesonkiNyt;
  */
 public interface Esiintyminen {
 
+    /**
+     * Rajapinnan metodi joka palauttaa kalan talvisen esiintymisen.
+     *
+     * @return talven esiintyminen String tyyppisenä.
+     */
     public String getTalviEsiintyminen();
 
+    /**
+     * Rajapinnan metodi joka palauttaa kalan kevään esiintymisen.
+     *
+     * @return kevään esiintyminen String tyyppisenä.
+     */
     public String getKevatEsiintyminen();
 
+    /**
+     * Rajapinnan metodi joka palauttaa kalan kesän esiintymisen.
+     *
+     * @return kesän esiintyminen String tyyppisenä.
+     */
     public String getKesaEsiintyminen();
 
+    /**
+     * Rajapinnan metodi joka palauttaa kalan syksy esiintymisen.
+     *
+     * @return syksy esiintyminen String tyyppisenä.
+     */
     public String getSyksyEsiintyminen();
 
     /**

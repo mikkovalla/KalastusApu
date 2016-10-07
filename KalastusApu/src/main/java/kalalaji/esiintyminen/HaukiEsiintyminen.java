@@ -92,6 +92,13 @@ public enum HaukiEsiintyminen implements Esiintyminen {
         return this.syksy;
     }
 
+    /**
+     * Metodi vakion määrittelemän kalan esiintymisen hakuun sesongin mukaan.
+     *
+     * @param es Esiintyminen rajapinta.
+     * @param sn SesonkiNyt olio.
+     * @return Vakio arvon esiintymisen sesongin mukaan String tyyppisenä.
+     */
     @Override
     public String esiintyySesonginMukaan(Esiintyminen es, SesonkiNyt sn) {
         sn = new SesonkiNyt();
