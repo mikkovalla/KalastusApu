@@ -16,14 +16,20 @@ import static saatila.vakiot.Sateet.POUTA;
 import static saatila.vakiot.Taivas.AURINKOINEN;
 
 /**
- *
- * @author mikko
+ * Main luokka missä testataan ja tarkastetaan olioiden palauttamia tietoja.
  */
 public class Main {
 
     //Testi Main luokka jolla testataan olioiden palauttamat arvot ennen logiikka luokkaa ja UI luokkaa
+    /**
+     * Main luokan päämetodi.
+     *
+     * @param args testiin.
+     */
     public static void main(String[] args) {
-
+        /**
+         * Olio testaus tähän alle.
+         */
         SesonkiNyt sn = new SesonkiNyt();
         AlueValinta av = new AlueValinta(MERI, "", 15, 10);
         Tuuli t = new Tuuli(ETELÄ, 5);
@@ -33,6 +39,7 @@ public class Main {
 
         System.out.println(sn.toString() + "\n" + av.toString() + "\n" + saa.toString() + "\n");
         System.out.println("Kohde kala: " + Kalat.Hauki + "\n");
-        System.out.println("Esiintyminen: " + Kalat.Hauki.esiintyySesonginMukaan());
+        System.out.println("Esiintyminen: \n" + Kalat.Hauki.esiintyySesonginMukaan());
+        System.out.println("Kalastustapa: \n" + Kalat.Hauki.kalastustapaSesonginMukaan());
     }
 }
