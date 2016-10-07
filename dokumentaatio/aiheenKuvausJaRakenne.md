@@ -26,4 +26,4 @@ Käyttäjä käyttää ohjelmaa seuraavanlaisesti:
 ## Luokkakaavio
 
 
-![Luokkakaavio päivitetty](https://github.com/mikkovalla/KalastusApu/blob/master/dokumentaatio/kalastusApu_luokkakaavio2.png "Luokkakaavio päivitetty")
+![Luokkakaavio päivitetty](https://github.com/mikkovalla/KalastusApu/blob/master/dokumentaatio/kalastusApu_luokkakaavio.png)
