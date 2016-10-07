@@ -27,3 +27,7 @@ Käyttäjä käyttää ohjelmaa seuraavanlaisesti:
 
 
 ![Luokkakaavio päivitetty](https://github.com/mikkovalla/KalastusApu/blob/master/dokumentaatio/kalastusApu_luokkakaavio.png)
+
+## Sekvenssikaavio
+
+![Sekvenssikaavio](https://github.com/mikkovalla/KalastusApu/blob/master/dokumentaatio/sekvenssi_kaaviot.png)
