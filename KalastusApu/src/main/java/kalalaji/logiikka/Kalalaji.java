@@ -6,16 +6,8 @@
 package kalalaji.logiikka;
 
 /**
- *
- * @author mikko
+ * Kalalaji rajapinta.
  */
 public interface Kalalaji {
 
-    public void setLaji(String laji);
-
-    public String getLaji();
-
-    public void setEsiintyminen(String es);
-
-    public String getEsiintyminen();
 }
