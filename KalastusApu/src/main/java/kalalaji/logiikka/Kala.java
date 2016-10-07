@@ -6,8 +6,7 @@
 package kalalaji.logiikka;
 
 /**
- *
- * @author mikko
+ * Kala luokka.
  */
 public class Kala {
 
