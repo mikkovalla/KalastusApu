@@ -10,7 +10,7 @@ import java.util.GregorianCalendar;
 
 /**
  *
- * Kuukausi luokka
+ * Kuukausi luokka.
  */
 public class Kuukausi {
 
@@ -34,10 +34,9 @@ public class Kuukausi {
     }
 
     /**
+     * Metodissa if lause tarkistaa että kk muuttuja on arvoväliltä 1 ja 12.
      *
      * @param kk on int tyyppinen joka vastaa haluttua kuukautta.
-     *
-     * Metodissa if lause tarkistaa että kk muuttuja on arvoväliltä 1 ja 12.
      */
     public void setKuukausi(int kk) {
 
@@ -64,11 +63,10 @@ public class Kuukausi {
     }
 
     /**
-     * toString metodi luokalle Kuukausi
+     * toString metodi luokalle Kuukausi.
      *
      * @return kuukauden nimi ja numero.
      */
-
     @Override
     public String toString() {
         return "On " + getKuuNimi() + "(" + this.kuukausi + ")";
