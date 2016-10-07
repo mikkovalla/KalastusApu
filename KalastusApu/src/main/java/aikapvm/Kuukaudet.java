@@ -37,6 +37,8 @@ public enum Kuukaudet {
     /**
      *
      * Metodi palauttaa kuukauden numeron int tyyppisenä.
+     *
+     * @return Kuukauden numerona int tyyppisenä.
      */
     public int getKuukausiNumero() {
         return this.kuukausiNumero;
@@ -45,6 +47,8 @@ public enum Kuukaudet {
     /**
      *
      * Metodi palauttaa kuukauden sesongin String muodossa.
+     *
+     * @return Kuukauden sesonki String tyyppisenä.
      */
     public String getKuukaudenSesonki() {
         return this.sesonki;
