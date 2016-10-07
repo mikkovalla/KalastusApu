@@ -12,14 +12,14 @@ package alue;
 public interface Alue {
 
     /**
-     * Rajapinnan metodi
+     * Rajapinnan metodi.
      *
      * @return palauttaa Alueen nimen string tyyppisenä.
      */
     public String getAlue();
 
     /**
-     * Rajapinnan metodi
+     * Rajapinnan metodi.
      *
      * @return palauttaa vedenVarin String tyyppisenä.
      */
