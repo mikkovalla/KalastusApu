@@ -17,7 +17,7 @@ public class AlueValinta implements Alue {
     private String vedenVari;
     private int vedenLampo;
     private int vedenKorkeus;
-    private Vesi vesi;
+    private final Vesi vesi;
 
     /**
      * Konstruktori luo alueen ilmentymän.

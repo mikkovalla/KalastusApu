@@ -9,7 +9,7 @@ import saatila.saa.Tuuli;
 import org.junit.Before;
 import org.junit.Test;
 import static org.junit.Assert.*;
-import static saatila.vakiot.Tuulensuunta.ETELÄ;
+import static saatila.vakiot.Tuulensuunta.ETELA;
 import static saatila.vakiot.Tuulensuunta.LOUNAS;
 import static saatila.vakiot.Tuulensuunta.POHJOINEN;
 
@@ -23,7 +23,7 @@ public class TuuliTest {
 
     @Before
     public void setUp() {
-        tuuli = new Tuuli(ETELÄ, 10);
+        tuuli = new Tuuli(ETELA, 10);
     }
 
     @Test
@@ -47,7 +47,7 @@ public class TuuliTest {
 
     @Test
     public void testGetSuunta() {
-        assertEquals(tuuli.getSuunta(), ETELÄ);
+        assertEquals(tuuli.getSuunta(), ETELA);
     }
 
     @Test

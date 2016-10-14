@@ -15,7 +15,6 @@ import java.util.GregorianCalendar;
 public class Kuukausi {
 
     private int kuukausi;
-    private Kuukaudet k;
 
     /**
      * Kuukausi luokan konstruktori. Konstruktori luo kuukausi olion tämän
@@ -51,12 +50,12 @@ public class Kuukausi {
      * Metodi käy läpi for loopilla Kuukaudet vakio arvot, ja if lause tarkistaa
      * minkä vakio arvon numero vastaa kuukausi luokan this.kuukausi arvoa.
      *
-     * @return kN vastaa Enum luokan Kuukaudet vakio arvoa.
+     * @return kuukaudetVakio vastaa Enum luokan Kuukaudet vakio arvoa.
      */
     public Kuukaudet getKuuNimi() {
-        for (Kuukaudet kN : Kuukaudet.values()) {
-            if (kN.getKuukausiNumero() == getKuukausi()) {
-                return kN;
+        for (Kuukaudet kuukaudetVakio : Kuukaudet.values()) {
+            if (kuukaudetVakio.getKuukausiNumero() == getKuukausi()) {
+                return kuukaudetVakio;
             }
         }
         return null;

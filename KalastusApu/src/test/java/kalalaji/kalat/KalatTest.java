@@ -18,10 +18,10 @@ import static org.junit.Assert.*;
  */
 public class KalatTest {
 
-    private HaukiKalastus haukiKalastus;
-    private HaukiEsiintyminen haukiEsiintyminen;
+    private KalastustapaYleinen haukiKalastus;
+    private Esiintyminen haukiEsiintyminen;
     Esiintyminen es;
-    Kalastustapa kt;
+    KalastustapaYleinen kt;
     private SesonkiNyt sn = new SesonkiNyt();
     private String talviKalastus;
     private String kevatKalastus;
@@ -34,8 +34,8 @@ public class KalatTest {
 
     @Before
     public void setUp() {
-        haukiKalastus = HaukiKalastus.HAUKI;
-        haukiEsiintyminen = HaukiEsiintyminen.HAUKI;
+        haukiKalastus = KalastustapaYleinen.HAUKI;
+        haukiEsiintyminen = Esiintyminen.HAUKI;
         this.talviKalastus = haukiKalastus.getTalviKalastus();
         this.kevatKalastus = haukiKalastus.getKevatKalastus();
         this.kesaKalastus = haukiKalastus.getKesaKalastus();

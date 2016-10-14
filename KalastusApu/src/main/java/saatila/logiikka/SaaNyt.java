@@ -56,6 +56,22 @@ public class SaaNyt {
         this.tuuli = t;
     }
 
+    public String getSaaNyt() {
+        return this.pilvet + " " + this.sade + " " + this.tuuli.getSuunta() + " " + this.tuuli.getNopeus();
+    }
+
+    public Pilvisyys getPilvet() {
+        return this.pilvet;
+    }
+
+    public Sade getSade() {
+        return this.sade;
+    }
+
+    public Tuuli getTuuli() {
+        return this.tuuli;
+    }
+
     @Override
     public String toString() {
         return "Sää: \nPilvisyys: " + this.pilvet.toString() + "\nSade: " + this.sade.toString() + "\n" + this.tuuli.toString();

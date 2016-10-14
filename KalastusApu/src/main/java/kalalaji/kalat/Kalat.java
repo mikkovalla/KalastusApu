@@ -8,6 +8,7 @@ package kalalaji.kalat;
 import aikapvm.SesonkiNyt;
 import kalalaji.esiintyminen.*;
 import kalalaji.kalastustapa.*;
+import kalalaji.saaliskalat.*;
 
 /**
  * Vakio luokka joka luo yhden olion joka sisältää esiintymisen sekä
@@ -16,24 +17,28 @@ import kalalaji.kalastustapa.*;
  */
 public enum Kalat {
     //Lisättynä vain hauki jotta ohjelma pysyisi siedettävässä mittakaavassa tässä vaiheessa.
-    //Ahven, Kuha, Taimen;
-    Hauki(HaukiEsiintyminen.HAUKI, HaukiKalastus.HAUKI);
+    //esim Ahven, Kuha, Taimen;
+    Hauki(Esiintyminen.HAUKI, KalastustapaYleinen.HAUKI, Saaliskalat.HAUKI, KalastustapaSaanMukaan.HAUKI);
 
-    private Esiintyminen es;
-    private Kalastustapa kt;
-    private SesonkiNyt sn = new SesonkiNyt();
+    private final Esiintyminen esiintyminen;
+    private final KalastustapaYleinen kalastustapa;
+    private final Saaliskalat saaliskalat;
+    private final KalastustapaSaanMukaan kalastustapaSaanMukaan;
+    private final SesonkiNyt sesonkinyt = new SesonkiNyt();
 
     /**
      * Konstrukstori asettaa vakio arvolle sitä vastaavat parametrit.
      *
-     * @param es on Esiintyminen rajapinta joka sisältää kaikki rajapinnan
-     * toteuttavat luokat
-     * @param kt on Kalastustapa rajapinta joka sisältää kaikki rajapinnan
-     * toteuttavat luokat
+     * @param es on Esiintyminen vakio luokka
+     * @param kt on KalastustapaYleinen vakio luokka
+     * @param sk on Saaliskalat vakio luokka
+     * @param ksm on KalastustapaSaanMukaan vakio luokka
      */
-    Kalat(Esiintyminen es, Kalastustapa kt) {
-        this.es = es;
-        this.kt = kt;
+    Kalat(Esiintyminen es, KalastustapaYleinen kt, Saaliskalat sk, KalastustapaSaanMukaan ksm) {
+        this.esiintyminen = es;
+        this.kalastustapa = kt;
+        this.saaliskalat = sk;
+        this.kalastustapaSaanMukaan = ksm;
     }
 
     /**
@@ -42,15 +47,36 @@ public enum Kalat {
      * @return esiintyminen sesongin mukaan String tyyppisenä.
      */
     public String esiintyySesonginMukaan() {
-        return es.esiintyySesonginMukaan(es, sn);
+        return esiintyminen.esiintyySesonginMukaan(esiintyminen, sesonkinyt);
     }
 
     /**
-     * Metodi hakee vakio kalaa koskevan kalastustavan.
+     * Metodi hakee vakio kalaa koskevan yleisen kalastustavan.
      *
      * @return kalastus tapa sesongin mukaan String tyyppisenä.
      */
     public String kalastustapaSesonginMukaan() {
-        return kt.kalastusSesonginMukaan(kt, sn);
+        return kalastustapa.kalastusSesonginMukaan(kalastustapa, sesonkinyt);
+    }
+
+    /**
+     * Metodi hakee vakio kalaa koskevat saaliskalat.
+     *
+     * @return saaliskalat sesongin mukaan String tyyppisenä.
+     */
+    public String saalisKalatSesonginMukaan() {
+        return saaliskalat.saalisSesonginMukaan(saaliskalat, sesonkinyt);
+    }
+
+    /**
+     * Metodi hakee vakio kalaa koskevan kalastustavan tuulen sekä
+     * vedenkorkeuden mukaan.
+     *
+     * @param nopeus tuulen nopeus int tyyppisenä.
+     * @param korkeus vedenkorkeus int tyyppisenä.
+     * @return String typpisen vakio arvon metodin parametrien perusteella.
+     */
+    public String kalastustapaSaanMukaan(int nopeus, int korkeus) {
+        return kalastustapaSaanMukaan.kalastusTapaSaanMukaanTuulenNopeusJaSuunta(nopeus) + " " + kalastustapaSaanMukaan.kalastusTapaSaanMukaanVedenKorkeus(korkeus);
     }
 }

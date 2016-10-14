@@ -19,8 +19,8 @@ public class AlueValintaTest {
     AlueValinta paikka;
     private Vesi vesi = MERI;
     private String vari = "sininen";
-    private int lampo = 10;
-    private int korkeus = 0;
+    private final int lampo = 10;
+    private final int korkeus = 0;
 
     @Before
     public void setUp() {
@@ -119,7 +119,7 @@ public class AlueValintaTest {
 
     @Test
     public void testOletusVedenVariPalauttaaKuukaudenMukaanOikeanArvonJarvi() {
-        AlueValinta jarvi = new AlueValinta(Vesi.JÄRVI, "punainen", 15, 0);
+        AlueValinta jarvi = new AlueValinta(Vesi.JARVI, "punainen", 15, 0);
         jarvi.setVedenVari("");
         jarvi.oletusVedenVari();
         assertEquals(jarvi.vedenVari(), "tumman humuksinen");

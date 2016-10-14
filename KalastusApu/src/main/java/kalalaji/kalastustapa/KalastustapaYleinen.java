@@ -11,7 +11,7 @@ import aikapvm.SesonkiNyt;
  * Vakio luokka josta näkee Haukea koskevat kalastustavat.
  *
  */
-public enum HaukiKalastus implements Kalastustapa {
+public enum KalastustapaYleinen {
 
     HAUKI(
             //Talvi
@@ -45,10 +45,10 @@ public enum HaukiKalastus implements Kalastustapa {
             + "Kaislikot:\n"
             + "-	Lusikka, jerkki, shädi, spinnerbait");
 
-    private String kTalvi;
-    private String kKevat;
-    private String kKesa;
-    private String kSyksy;
+    private final String kTalvi;
+    private final String kKevat;
+    private final String kKesa;
+    private final String kSyksy;
 
     /**
      * Luokan konstruktori joka asettaa vakio arvolle parametrit.
@@ -58,29 +58,45 @@ public enum HaukiKalastus implements Kalastustapa {
      * @param kesa on kesä kalastustavat String tyyppisenä.
      * @param syksy on syys kalastustavat String tyyppisenä.
      */
-    HaukiKalastus(String talvi, String kevat, String kesa, String syksy) {
+    KalastustapaYleinen(String talvi, String kevat, String kesa, String syksy) {
         this.kTalvi = talvi;
         this.kKevat = kevat;
         this.kKesa = kesa;
         this.kSyksy = syksy;
     }
 
-    @Override
+    /**
+     * Getteri.
+     *
+     * @return String arvo kTalvi.
+     */
     public String getTalviKalastus() {
         return this.kTalvi;
     }
 
-    @Override
+    /**
+     * Getteri.
+     *
+     * @return String arvo kKevat.
+     */
     public String getKevatKalastus() {
         return this.kKevat;
     }
 
-    @Override
+    /**
+     * Getteri.
+     *
+     * @return String arvo kKesa.
+     */
     public String getKesaKalastus() {
         return this.kKesa;
     }
 
-    @Override
+    /**
+     * Getteri.
+     *
+     * @return String arvo kSyksy.
+     */
     public String getSyksyKalastus() {
         return this.kSyksy;
     }
@@ -88,22 +104,21 @@ public enum HaukiKalastus implements Kalastustapa {
     /**
      * Metodi hakee kalastustavan sesongin mukaan.
      *
-     * @param kt Kalastustapa rajapinta.
-     * @param sn SesonkiNyt olio.
+     * @param kalastustapa KalastustapaYleinen vakio luokka.
+     * @param sesonkinyt SesonkiNyt olio.
      * @return vakio arvon kalastustapa sesongin mukkan String tyyppisenä.
      */
-    @Override
-    public String kalastusSesonginMukaan(Kalastustapa kt, SesonkiNyt sn) {
-        sn = new SesonkiNyt();
-        switch (sn.getSesonki()) {
+    public String kalastusSesonginMukaan(KalastustapaYleinen kalastustapa, SesonkiNyt sesonkinyt) {
+        sesonkinyt = new SesonkiNyt();
+        switch (sesonkinyt.getSesonki()) {
             case "TALVI":
-                return kt.getTalviKalastus();
+                return kalastustapa.getTalviKalastus();
             case "KEVÄT":
-                return kt.getKevatKalastus();
+                return kalastustapa.getKevatKalastus();
             case "KESÄ":
-                return kt.getKesaKalastus();
+                return kalastustapa.getKesaKalastus();
             case "SYKSY":
-                return kt.getSyksyKalastus();
+                return kalastustapa.getSyksyKalastus();
             default:
                 return "Jotain meni pieleen.";
         }

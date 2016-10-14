@@ -13,12 +13,12 @@ package aikapvm;
  */
 public enum Kuukaudet {
 
-    TAMMIKUU(1, "TALVI"), HELMIKUU(2, "TALVI"), MAALISKUU(3, "KEVÄT"),
-    HUHTIKUU(4, "KEVÄT"), TOUKOKUU(5, "KEVÄT"), KESÄKUU(6, "KESÄ"), HEINÄKUU(7, "KESÄ"),
-    ELOKUU(8, "KESÄ"), SYYSKUU(9, "SYKSY"), LOKAKUU(10, "SYKSY"), MARRASKUU(11, "SYKSY"), JOULUKUU(12, "TALVI");
+    TAMMIKUU(1, "TALVI"), HELMIKUU(2, "TALVI"), MAALISKUU(3, "KEVAT"),
+    HUHTIKUU(4, "KEVAT"), TOUKOKUU(5, "KEVAT"), KESÄKUU(6, "KESA"), HEINÄKUU(7, "KESA"),
+    ELOKUU(8, "KESA"), SYYSKUU(9, "SYKSY"), LOKAKUU(10, "SYKSY"), MARRASKUU(11, "SYKSY"), JOULUKUU(12, "TALVI");
 
-    private int kuukausiNumero;
-    private String sesonki;
+    private final int kuukausiNumero;
+    private final String sesonki;
 
     /**
      *

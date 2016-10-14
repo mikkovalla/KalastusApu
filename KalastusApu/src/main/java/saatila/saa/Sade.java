@@ -31,7 +31,7 @@ public class Sade {
      * @param st vakio arvo.
      */
     public void setSade(Sateet st) {
-        if (st.equals(sateet.LUMI) || st.equals(sateet.VESI) || st.equals(sateet.RÄNTÄ)) {
+        if (st.equals(sateet.LUMI) || st.equals(sateet.VESI) || st.equals(sateet.RANTA)) {
             this.sateet = st;
         }
     }

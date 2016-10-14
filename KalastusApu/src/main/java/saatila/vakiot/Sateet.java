@@ -10,5 +10,5 @@ package saatila.vakiot;
  * Enum luokka jossa sade tyypit vakio arvoina.
  */
 public enum Sateet {
-    VESI, RÄNTÄ, LUMI, VESITIHKU, POUTA;
+    VESI, RANTA, LUMI, VESITIHKU, POUTA;
 }

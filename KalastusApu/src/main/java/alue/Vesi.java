@@ -15,13 +15,13 @@ import aikapvm.SesonkiNyt;
 public enum Vesi {
 
     MERI("sinertävän vihreä", "kirkas vihertävä", "ruskean vihertävä", "tumman vihertävä"),
-    JÄRVI("kirkas humuksinen", "likaisen humuksinen", "vihertävän humuksinen", "tumman humuksinen"),
+    JARVI("kirkas humuksinen", "likaisen humuksinen", "vihertävän humuksinen", "tumman humuksinen"),
     JOKI("kirkkaan humuksinen", "likaisen ruskean humuksinen", "ruskean vihertävä", "tumman humuksinen");
 
-    private String savyTalvi;
-    private String savyKevat;
-    private String savyKesa;
-    private String savySyksy;
+    private final String savyTalvi;
+    private final String savyKevat;
+    private final String savyKesa;
+    private final String savySyksy;
 
     /**
      * Konstruktori joka asettaa Vakio arvolle oletusvedenvärit.
@@ -64,18 +64,18 @@ public enum Vesi {
      * vakio arvo Vesi vesi arvosta. Metodi saa nämä parametreina.
      *
      * @param vesi on Enum luokan Vesi vakio
-     * @param sn SesonkiNyt luokan ilmentymä
+     * @param sesonkinyt SesonkiNyt luokan ilmentymä
      * @return palauttaa vesi vakion metodin mukaisen string tyyppisen vedenväri
      * arvon joka vastaa SesonkiNyt määrittelemää sesonkia.
      */
-    public String getSavySesonginMukaan(Vesi vesi, SesonkiNyt sn) {
-        sn = new SesonkiNyt();
-        switch (sn.getSesonki()) {
+    public String getSavySesonginMukaan(Vesi vesi, SesonkiNyt sesonkinyt) {
+        sesonkinyt = new SesonkiNyt();
+        switch (sesonkinyt.getSesonki()) {
             case "TALVI":
                 return vesi.getSavyTalvi();
-            case "KEVÄT":
+            case "KEVAT":
                 return vesi.getSavyKevat();
-            case "KESÄ":
+            case "KESA":
                 return vesi.getSavyKesa();
             case "SYKSY":
                 return vesi.getSavySyksy();

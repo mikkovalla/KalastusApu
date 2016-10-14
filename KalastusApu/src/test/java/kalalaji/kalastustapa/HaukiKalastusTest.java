@@ -12,8 +12,8 @@ import static org.junit.Assert.*;
 
 public class HaukiKalastusTest {
 
-    private HaukiKalastus hauki;
-    private SesonkiNyt sn = new SesonkiNyt();
+    private KalastustapaYleinen hauki;
+    private final SesonkiNyt sn = new SesonkiNyt();
     private String talvi;
     private String kevat;
     private String kesa;
@@ -21,7 +21,7 @@ public class HaukiKalastusTest {
 
     @Before
     public void setUp() {
-        hauki = HaukiKalastus.HAUKI;
+        hauki = KalastustapaYleinen.HAUKI;
         this.talvi = hauki.getTalviKalastus();
         this.kevat = hauki.getKevatKalastus();
         this.kesa = hauki.getKesaKalastus();
