@@ -23,13 +23,13 @@
 <a class="jxr_linenumber" name="L15" href="#L15">15</a>  <strong class="jxr_keyword">public</strong> enum <a href="../alue/Vesi.html">Vesi</a> {
 <a class="jxr_linenumber" name="L16" href="#L16">16</a>  
 <a class="jxr_linenumber" name="L17" href="#L17">17</a>      MERI(<span class="jxr_string">"sinertävän vihreä"</span>, <span class="jxr_string">"kirkas vihertävä"</span>, <span class="jxr_string">"ruskean vihertävä"</span>, <span class="jxr_string">"tumman vihertävä"</span>),
-<a class="jxr_linenumber" name="L18" href="#L18">18</a>      JÄRVI(<span class="jxr_string">"kirkas humuksinen"</span>, <span class="jxr_string">"likaisen humuksinen"</span>, <span class="jxr_string">"vihertävän humuksinen"</span>, <span class="jxr_string">"tumman humuksinen"</span>),
+<a class="jxr_linenumber" name="L18" href="#L18">18</a>      JARVI(<span class="jxr_string">"kirkas humuksinen"</span>, <span class="jxr_string">"likaisen humuksinen"</span>, <span class="jxr_string">"vihertävän humuksinen"</span>, <span class="jxr_string">"tumman humuksinen"</span>),
 <a class="jxr_linenumber" name="L19" href="#L19">19</a>      JOKI(<span class="jxr_string">"kirkkaan humuksinen"</span>, <span class="jxr_string">"likaisen ruskean humuksinen"</span>, <span class="jxr_string">"ruskean vihertävä"</span>, <span class="jxr_string">"tumman humuksinen"</span>);
 <a class="jxr_linenumber" name="L20" href="#L20">20</a>  
-<a class="jxr_linenumber" name="L21" href="#L21">21</a>      <strong class="jxr_keyword">private</strong> String savyTalvi;
-<a class="jxr_linenumber" name="L22" href="#L22">22</a>      <strong class="jxr_keyword">private</strong> String savyKevat;
-<a class="jxr_linenumber" name="L23" href="#L23">23</a>      <strong class="jxr_keyword">private</strong> String savyKesa;
-<a class="jxr_linenumber" name="L24" href="#L24">24</a>      <strong class="jxr_keyword">private</strong> String savySyksy;
+<a class="jxr_linenumber" name="L21" href="#L21">21</a>      <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">final</strong> String savyTalvi;
+<a class="jxr_linenumber" name="L22" href="#L22">22</a>      <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">final</strong> String savyKevat;
+<a class="jxr_linenumber" name="L23" href="#L23">23</a>      <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">final</strong> String savyKesa;
+<a class="jxr_linenumber" name="L24" href="#L24">24</a>      <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">final</strong> String savySyksy;
 <a class="jxr_linenumber" name="L25" href="#L25">25</a>  
 <a class="jxr_linenumber" name="L26" href="#L26">26</a>      <em class="jxr_javadoccomment">/**</em>
 <a class="jxr_linenumber" name="L27" href="#L27">27</a>  <em class="jxr_javadoccomment">     * Konstruktori joka asettaa Vakio arvolle oletusvedenvärit.</em>
@@ -72,18 +72,18 @@
 <a class="jxr_linenumber" name="L64" href="#L64">64</a>  <em class="jxr_javadoccomment">     * vakio arvo Vesi vesi arvosta. Metodi saa nämä parametreina.</em>
 <a class="jxr_linenumber" name="L65" href="#L65">65</a>  <em class="jxr_javadoccomment">     *</em>
 <a class="jxr_linenumber" name="L66" href="#L66">66</a>  <em class="jxr_javadoccomment">     * @param vesi on Enum luokan Vesi vakio</em>
-<a class="jxr_linenumber" name="L67" href="#L67">67</a>  <em class="jxr_javadoccomment">     * @param sn SesonkiNyt luokan ilmentymä</em>
+<a class="jxr_linenumber" name="L67" href="#L67">67</a>  <em class="jxr_javadoccomment">     * @param sesonkinyt SesonkiNyt luokan ilmentymä</em>
 <a class="jxr_linenumber" name="L68" href="#L68">68</a>  <em class="jxr_javadoccomment">     * @return palauttaa vesi vakion metodin mukaisen string tyyppisen vedenväri</em>
 <a class="jxr_linenumber" name="L69" href="#L69">69</a>  <em class="jxr_javadoccomment">     * arvon joka vastaa SesonkiNyt määrittelemää sesonkia.</em>
 <a class="jxr_linenumber" name="L70" href="#L70">70</a>  <em class="jxr_javadoccomment">     */</em>
-<a class="jxr_linenumber" name="L71" href="#L71">71</a>      <strong class="jxr_keyword">public</strong> String getSavySesonginMukaan(<a href="../alue/Vesi.html">Vesi</a> vesi, <a href="../aikapvm/SesonkiNyt.html">SesonkiNyt</a> sn) {
-<a class="jxr_linenumber" name="L72" href="#L72">72</a>          sn = <strong class="jxr_keyword">new</strong> <a href="../aikapvm/SesonkiNyt.html">SesonkiNyt</a>();
-<a class="jxr_linenumber" name="L73" href="#L73">73</a>          <strong class="jxr_keyword">switch</strong> (sn.getSesonki()) {
+<a class="jxr_linenumber" name="L71" href="#L71">71</a>      <strong class="jxr_keyword">public</strong> String getSavySesonginMukaan(<a href="../alue/Vesi.html">Vesi</a> vesi, <a href="../aikapvm/SesonkiNyt.html">SesonkiNyt</a> sesonkinyt) {
+<a class="jxr_linenumber" name="L72" href="#L72">72</a>          sesonkinyt = <strong class="jxr_keyword">new</strong> <a href="../aikapvm/SesonkiNyt.html">SesonkiNyt</a>();
+<a class="jxr_linenumber" name="L73" href="#L73">73</a>          <strong class="jxr_keyword">switch</strong> (sesonkinyt.getSesonki()) {
 <a class="jxr_linenumber" name="L74" href="#L74">74</a>              <strong class="jxr_keyword">case</strong> <span class="jxr_string">"TALVI"</span>:
 <a class="jxr_linenumber" name="L75" href="#L75">75</a>                  <strong class="jxr_keyword">return</strong> vesi.getSavyTalvi();
-<a class="jxr_linenumber" name="L76" href="#L76">76</a>              <strong class="jxr_keyword">case</strong> <span class="jxr_string">"KEVÄT"</span>:
+<a class="jxr_linenumber" name="L76" href="#L76">76</a>              <strong class="jxr_keyword">case</strong> <span class="jxr_string">"KEVAT"</span>:
 <a class="jxr_linenumber" name="L77" href="#L77">77</a>                  <strong class="jxr_keyword">return</strong> vesi.getSavyKevat();
-<a class="jxr_linenumber" name="L78" href="#L78">78</a>              <strong class="jxr_keyword">case</strong> <span class="jxr_string">"KESÄ"</span>:
+<a class="jxr_linenumber" name="L78" href="#L78">78</a>              <strong class="jxr_keyword">case</strong> <span class="jxr_string">"KESA"</span>:
 <a class="jxr_linenumber" name="L79" href="#L79">79</a>                  <strong class="jxr_keyword">return</strong> vesi.getSavyKesa();
 <a class="jxr_linenumber" name="L80" href="#L80">80</a>              <strong class="jxr_keyword">case</strong> <span class="jxr_string">"SYKSY"</span>:
 <a class="jxr_linenumber" name="L81" href="#L81">81</a>                  <strong class="jxr_keyword">return</strong> vesi.getSavySyksy();

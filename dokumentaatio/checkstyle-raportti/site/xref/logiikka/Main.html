@@ -14,43 +14,51 @@
 <a class="jxr_linenumber" name="L6" href="#L6">6</a>   <strong class="jxr_keyword">import</strong> alue.AlueValinta;
 <a class="jxr_linenumber" name="L7" href="#L7">7</a>   <strong class="jxr_keyword">import</strong> aikapvm.SesonkiNyt;
 <a class="jxr_linenumber" name="L8" href="#L8">8</a>   <strong class="jxr_keyword">import</strong> <strong class="jxr_keyword">static</strong> alue.Vesi.MERI;
-<a class="jxr_linenumber" name="L9" href="#L9">9</a>   <strong class="jxr_keyword">import</strong> kalalaji.kalat.Kalat;
-<a class="jxr_linenumber" name="L10" href="#L10">10</a>  <strong class="jxr_keyword">import</strong> saatila.logiikka.SaaNyt;
-<a class="jxr_linenumber" name="L11" href="#L11">11</a>  <strong class="jxr_keyword">import</strong> saatila.saa.Pilvisyys;
-<a class="jxr_linenumber" name="L12" href="#L12">12</a>  <strong class="jxr_keyword">import</strong> saatila.saa.Sade;
-<a class="jxr_linenumber" name="L13" href="#L13">13</a>  <strong class="jxr_keyword">import</strong> <strong class="jxr_keyword">static</strong> saatila.vakiot.Tuulensuunta.ETELÄ;
+<a class="jxr_linenumber" name="L9" href="#L9">9</a>   <strong class="jxr_keyword">import</strong> gui.KuvatTest;
+<a class="jxr_linenumber" name="L10" href="#L10">10</a>  <strong class="jxr_keyword">import</strong> kalalaji.kalat.Kalat;
+<a class="jxr_linenumber" name="L11" href="#L11">11</a>  <strong class="jxr_keyword">import</strong> saatila.logiikka.SaaNyt;
+<a class="jxr_linenumber" name="L12" href="#L12">12</a>  <strong class="jxr_keyword">import</strong> saatila.saa.Pilvisyys;
+<a class="jxr_linenumber" name="L13" href="#L13">13</a>  <strong class="jxr_keyword">import</strong> saatila.saa.Sade;
 <a class="jxr_linenumber" name="L14" href="#L14">14</a>  <strong class="jxr_keyword">import</strong> saatila.saa.Tuuli;
 <a class="jxr_linenumber" name="L15" href="#L15">15</a>  <strong class="jxr_keyword">import</strong> <strong class="jxr_keyword">static</strong> saatila.vakiot.Sateet.POUTA;
-<a class="jxr_linenumber" name="L16" href="#L16">16</a>  <strong class="jxr_keyword">import</strong> <strong class="jxr_keyword">static</strong> saatila.vakiot.Taivas.AURINKOINEN;
-<a class="jxr_linenumber" name="L17" href="#L17">17</a>  
-<a class="jxr_linenumber" name="L18" href="#L18">18</a>  <em class="jxr_javadoccomment">/**</em>
-<a class="jxr_linenumber" name="L19" href="#L19">19</a>  <em class="jxr_javadoccomment"> * Main luokka missä testataan ja tarkastetaan olioiden palauttamia tietoja.</em>
-<a class="jxr_linenumber" name="L20" href="#L20">20</a>  <em class="jxr_javadoccomment"> */</em>
-<a class="jxr_linenumber" name="L21" href="#L21">21</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a href="../logiikka/Main.html">Main</a> {
-<a class="jxr_linenumber" name="L22" href="#L22">22</a>  
-<a class="jxr_linenumber" name="L23" href="#L23">23</a>      <em class="jxr_comment">//Testi Main luokka jolla testataan olioiden palauttamat arvot ennen logiikka luokkaa ja UI luokkaa</em>
-<a class="jxr_linenumber" name="L24" href="#L24">24</a>      <em class="jxr_javadoccomment">/**</em>
-<a class="jxr_linenumber" name="L25" href="#L25">25</a>  <em class="jxr_javadoccomment">     * Main luokan päämetodi.</em>
-<a class="jxr_linenumber" name="L26" href="#L26">26</a>  <em class="jxr_javadoccomment">     *</em>
-<a class="jxr_linenumber" name="L27" href="#L27">27</a>  <em class="jxr_javadoccomment">     * @param args testiin.</em>
-<a class="jxr_linenumber" name="L28" href="#L28">28</a>  <em class="jxr_javadoccomment">     */</em>
-<a class="jxr_linenumber" name="L29" href="#L29">29</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">void</strong> main(String[] args) {
-<a class="jxr_linenumber" name="L30" href="#L30">30</a>          <em class="jxr_javadoccomment">/**</em>
-<a class="jxr_linenumber" name="L31" href="#L31">31</a>  <em class="jxr_javadoccomment">         * Olio testaus tähän alle.</em>
-<a class="jxr_linenumber" name="L32" href="#L32">32</a>  <em class="jxr_javadoccomment">         */</em>
-<a class="jxr_linenumber" name="L33" href="#L33">33</a>          <a href="../aikapvm/SesonkiNyt.html">SesonkiNyt</a> sn = <strong class="jxr_keyword">new</strong> <a href="../aikapvm/SesonkiNyt.html">SesonkiNyt</a>();
-<a class="jxr_linenumber" name="L34" href="#L34">34</a>          <a href="../alue/AlueValinta.html">AlueValinta</a> av = <strong class="jxr_keyword">new</strong> <a href="../alue/AlueValinta.html">AlueValinta</a>(MERI, <span class="jxr_string">""</span>, 15, 10);
-<a class="jxr_linenumber" name="L35" href="#L35">35</a>          <a href="../saatila/saa/Tuuli.html">Tuuli</a> t = <strong class="jxr_keyword">new</strong> <a href="../saatila/saa/Tuuli.html">Tuuli</a>(ETELÄ, 5);
-<a class="jxr_linenumber" name="L36" href="#L36">36</a>          <a href="../saatila/saa/Pilvisyys.html">Pilvisyys</a> p = <strong class="jxr_keyword">new</strong> <a href="../saatila/saa/Pilvisyys.html">Pilvisyys</a>(AURINKOINEN);
-<a class="jxr_linenumber" name="L37" href="#L37">37</a>          <a href="../saatila/saa/Sade.html">Sade</a> s = <strong class="jxr_keyword">new</strong> <a href="../saatila/saa/Sade.html">Sade</a>(POUTA);
-<a class="jxr_linenumber" name="L38" href="#L38">38</a>          <a href="../saatila/logiikka/SaaNyt.html">SaaNyt</a> saa = <strong class="jxr_keyword">new</strong> <a href="../saatila/logiikka/SaaNyt.html">SaaNyt</a>(p, s, t);
-<a class="jxr_linenumber" name="L39" href="#L39">39</a>  
-<a class="jxr_linenumber" name="L40" href="#L40">40</a>          System.out.println(sn.toString() + <span class="jxr_string">"\n"</span> + av.toString() + <span class="jxr_string">"\n"</span> + saa.toString() + <span class="jxr_string">"\n"</span>);
-<a class="jxr_linenumber" name="L41" href="#L41">41</a>          System.out.println(<span class="jxr_string">"Kohde kala: "</span> + Kalat.Hauki + <span class="jxr_string">"\n"</span>);
-<a class="jxr_linenumber" name="L42" href="#L42">42</a>          System.out.println(<span class="jxr_string">"Esiintyminen: \n"</span> + Kalat.Hauki.esiintyySesonginMukaan());
-<a class="jxr_linenumber" name="L43" href="#L43">43</a>          System.out.println(<span class="jxr_string">"Kalastustapa: \n"</span> + Kalat.Hauki.kalastustapaSesonginMukaan());
-<a class="jxr_linenumber" name="L44" href="#L44">44</a>      }
-<a class="jxr_linenumber" name="L45" href="#L45">45</a>  }
+<a class="jxr_linenumber" name="L16" href="#L16">16</a>  <strong class="jxr_keyword">import</strong> <strong class="jxr_keyword">static</strong> saatila.vakiot.Sateet.VESITIHKU;
+<a class="jxr_linenumber" name="L17" href="#L17">17</a>  <strong class="jxr_keyword">import</strong> <strong class="jxr_keyword">static</strong> saatila.vakiot.Taivas.AURINKOINEN;
+<a class="jxr_linenumber" name="L18" href="#L18">18</a>  <strong class="jxr_keyword">import</strong> <strong class="jxr_keyword">static</strong> saatila.vakiot.Taivas.SUMUINEN;
+<a class="jxr_linenumber" name="L19" href="#L19">19</a>  <strong class="jxr_keyword">import</strong> <strong class="jxr_keyword">static</strong> saatila.vakiot.Tuulensuunta.*;
+<a class="jxr_linenumber" name="L20" href="#L20">20</a>  
+<a class="jxr_linenumber" name="L21" href="#L21">21</a>  <em class="jxr_javadoccomment">/**</em>
+<a class="jxr_linenumber" name="L22" href="#L22">22</a>  <em class="jxr_javadoccomment"> * Main luokka missä testataan ja tarkastetaan olioiden palauttamia tietoja.</em>
+<a class="jxr_linenumber" name="L23" href="#L23">23</a>  <em class="jxr_javadoccomment"> */</em>
+<a class="jxr_linenumber" name="L24" href="#L24">24</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a href="../logiikka/Main.html">Main</a> {
+<a class="jxr_linenumber" name="L25" href="#L25">25</a>  
+<a class="jxr_linenumber" name="L26" href="#L26">26</a>      <em class="jxr_comment">//Testi Main luokka jolla testataan olioiden palauttamat arvot ennen logiikka luokkaa ja UI luokkaa</em>
+<a class="jxr_linenumber" name="L27" href="#L27">27</a>      <em class="jxr_javadoccomment">/**</em>
+<a class="jxr_linenumber" name="L28" href="#L28">28</a>  <em class="jxr_javadoccomment">     * Main luokan päämetodi.</em>
+<a class="jxr_linenumber" name="L29" href="#L29">29</a>  <em class="jxr_javadoccomment">     *</em>
+<a class="jxr_linenumber" name="L30" href="#L30">30</a>  <em class="jxr_javadoccomment">     * @param args testiin.</em>
+<a class="jxr_linenumber" name="L31" href="#L31">31</a>  <em class="jxr_javadoccomment">     */</em>
+<a class="jxr_linenumber" name="L32" href="#L32">32</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">void</strong> main(String[] args) {
+<a class="jxr_linenumber" name="L33" href="#L33">33</a>          <em class="jxr_javadoccomment">/**</em>
+<a class="jxr_linenumber" name="L34" href="#L34">34</a>  <em class="jxr_javadoccomment">         * Olio testaus tähän alle.</em>
+<a class="jxr_linenumber" name="L35" href="#L35">35</a>  <em class="jxr_javadoccomment">         */</em>
+<a class="jxr_linenumber" name="L36" href="#L36">36</a>          <a href="../aikapvm/SesonkiNyt.html">SesonkiNyt</a> sn = <strong class="jxr_keyword">new</strong> <a href="../aikapvm/SesonkiNyt.html">SesonkiNyt</a>();
+<a class="jxr_linenumber" name="L37" href="#L37">37</a>          <a href="../alue/AlueValinta.html">AlueValinta</a> av = <strong class="jxr_keyword">new</strong> <a href="../alue/AlueValinta.html">AlueValinta</a>(MERI, <span class="jxr_string">""</span>, 8, -30);
+<a class="jxr_linenumber" name="L38" href="#L38">38</a>          <a href="../saatila/saa/Tuuli.html">Tuuli</a> t = <strong class="jxr_keyword">new</strong> <a href="../saatila/saa/Tuuli.html">Tuuli</a>(POHJOINEN, 5);
+<a class="jxr_linenumber" name="L39" href="#L39">39</a>          <a href="../saatila/saa/Pilvisyys.html">Pilvisyys</a> p = <strong class="jxr_keyword">new</strong> <a href="../saatila/saa/Pilvisyys.html">Pilvisyys</a>(SUMUINEN);
+<a class="jxr_linenumber" name="L40" href="#L40">40</a>          <a href="../saatila/saa/Sade.html">Sade</a> s = <strong class="jxr_keyword">new</strong> <a href="../saatila/saa/Sade.html">Sade</a>(VESITIHKU);
+<a class="jxr_linenumber" name="L41" href="#L41">41</a>          <a href="../saatila/logiikka/SaaNyt.html">SaaNyt</a> saa = <strong class="jxr_keyword">new</strong> <a href="../saatila/logiikka/SaaNyt.html">SaaNyt</a>(p, s, t);
+<a class="jxr_linenumber" name="L42" href="#L42">42</a>  
+<a class="jxr_linenumber" name="L43" href="#L43">43</a>          System.out.println(sn.toString());
+<a class="jxr_linenumber" name="L44" href="#L44">44</a>          System.out.println(av.toString());
+<a class="jxr_linenumber" name="L45" href="#L45">45</a>          System.out.println(saa.getSaaNyt());
+<a class="jxr_linenumber" name="L46" href="#L46">46</a>          System.out.println(<span class="jxr_string">""</span>);
+<a class="jxr_linenumber" name="L47" href="#L47">47</a>          System.out.println(<span class="jxr_string">"Kohde kala: "</span> + Kalat.Hauki + <span class="jxr_string">"\n"</span>);
+<a class="jxr_linenumber" name="L48" href="#L48">48</a>          System.out.println(<span class="jxr_string">"Esiintyminen: \n"</span> + Kalat.Hauki.esiintyySesonginMukaan() + <span class="jxr_string">"\n"</span>);
+<a class="jxr_linenumber" name="L49" href="#L49">49</a>          System.out.println(<span class="jxr_string">"Saaliskalat: \n"</span> + Kalat.Hauki.saalisKalatSesonginMukaan() + <span class="jxr_string">"\n"</span>);
+<a class="jxr_linenumber" name="L50" href="#L50">50</a>          System.out.println(<span class="jxr_string">"Kalastustapa: \n"</span> + Kalat.Hauki.kalastustapaSesonginMukaan() + <span class="jxr_string">"\n"</span>);
+<a class="jxr_linenumber" name="L51" href="#L51">51</a>          System.out.println(<span class="jxr_string">"Kalastustapa sään mukaan: \n"</span> + Kalat.Hauki.kalastustapaSaanMukaan(t.getNopeus(), av.vedenKorkeus()));
+<a class="jxr_linenumber" name="L52" href="#L52">52</a>      }
+<a class="jxr_linenumber" name="L53" href="#L53">53</a>  }
 </pre>
 <hr/>
 <div id="footer">Copyright &#169; 2016. All rights reserved.</div>

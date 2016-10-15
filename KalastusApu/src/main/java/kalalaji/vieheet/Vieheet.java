@@ -23,6 +23,11 @@ public class Vieheet {
     private final Kalat kalaNimi;
     private ImageIcon kuva;
 
+    /**
+     * Konstruktori.
+     *
+     * @param kalanimi Kalat kalanimi parametri.
+     */
     public Vieheet(Kalat kalanimi) {
         this.kalaNimi = kalanimi;
     }
@@ -33,12 +38,19 @@ public class Vieheet {
         return vieheKuvat;
     }
 
+    /**
+     * Metodi.
+     *
+     * @param saanyt parametri.
+     * @param indeksi parametri.
+     * @return viehe kuva.
+     */
     public ImageIcon naytaVieheKuva(SaaNyt saanyt, int indeksi) {
         String[] kuvat = haeVieheKuvat();
         String kuvanNimi = kuvat[indeksi];
         //if (kuvanNimi.contains(saanyt.getPilvet().getPilvisyys().name()) || kuvanNimi.contains(saanyt.getSade().getSade().name())) {
-            this.kuva = new ImageIcon(getClass().getResource("/hauki/" + kuvanNimi));
-            return this.kuva;
+        this.kuva = new ImageIcon(getClass().getResource("/hauki/" + kuvanNimi));
+        return this.kuva;
         //}
         //return this.kuva;
     }

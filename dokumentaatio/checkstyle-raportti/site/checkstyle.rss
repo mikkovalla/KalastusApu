@@ -88,20 +88,6 @@ under the License.
               </tr>
                           <tr>
                 <td>
-                  <a href="${project.url}/checkstyle.html#kalalaji.esiintyminen.HaukiEsiintyminen.java">kalalaji/esiintyminen/HaukiEsiintyminen.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-              </tr>
-                          <tr>
-                <td>
                   <a href="${project.url}/checkstyle.html#saatila.saa.Sade.java">saatila/saa/Sade.java</a>
                 </td>
                 <td>
@@ -144,35 +130,7 @@ under the License.
               </tr>
                           <tr>
                 <td>
-                  <a href="${project.url}/checkstyle.html#kalalaji.logiikka.Kala.java">kalalaji/logiikka/Kala.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-              </tr>
-                          <tr>
-                <td>
                   <a href="${project.url}/checkstyle.html#saatila.logiikka.SaaNyt.java">saatila/logiikka/SaaNyt.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="${project.url}/checkstyle.html#kalalaji.kalastustapa.HaukiKalastus.java">kalalaji/kalastustapa/HaukiKalastus.java</a>
                 </td>
                 <td>
                   0
@@ -200,6 +158,20 @@ under the License.
               </tr>
                           <tr>
                 <td>
+                  <a href="${project.url}/checkstyle.html#kalalaji.kalastustapa.KalastustapaYleinen.java">kalalaji/kalastustapa/KalastustapaYleinen.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
                   <a href="${project.url}/checkstyle.html#kalalaji.kalat.Kalat.java">kalalaji/kalat/Kalat.java</a>
                 </td>
                 <td>
@@ -214,7 +186,21 @@ under the License.
               </tr>
                           <tr>
                 <td>
-                  <a href="${project.url}/checkstyle.html#kalalaji.logiikka.Kalalaji.java">kalalaji/logiikka/Kalalaji.java</a>
+                  <a href="${project.url}/checkstyle.html#kalalaji.vieheet.Vieheet.java">kalalaji/vieheet/Vieheet.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="${project.url}/checkstyle.html#gui.KuvatTest.java">gui/KuvatTest.java</a>
                 </td>
                 <td>
                   0
@@ -256,6 +242,20 @@ under the License.
               </tr>
                           <tr>
                 <td>
+                  <a href="${project.url}/checkstyle.html#kalalaji.kalastustapa.KalastustapaSaanMukaan.java">kalalaji/kalastustapa/KalastustapaSaanMukaan.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
                   <a href="${project.url}/checkstyle.html#saatila.vakiot.Sateet.java">saatila/vakiot/Sateet.java</a>
                 </td>
                 <td>
@@ -284,7 +284,7 @@ under the License.
               </tr>
                           <tr>
                 <td>
-                  <a href="${project.url}/checkstyle.html#kalalaji.kalastustapa.Kalastustapa.java">kalalaji/kalastustapa/Kalastustapa.java</a>
+                  <a href="${project.url}/checkstyle.html#kalalaji.saaliskalat.Saaliskalat.java">kalalaji/saaliskalat/Saaliskalat.java</a>
                 </td>
                 <td>
                   0

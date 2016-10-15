@@ -20,7 +20,7 @@ import static saatila.vakiot.Tuulensuunta.ETELA;
 
 /**
  *
- * @author mikko
+ * Tähän rakennetaan ja testataan GUI.
  */
 public final class KuvatTest extends javax.swing.JPanel {
 
@@ -32,7 +32,7 @@ public final class KuvatTest extends javax.swing.JPanel {
     private Vieheet viehe = new Vieheet(hauki);
 
     /**
-     * Creates new form KuvatTest
+     * Creates new form KuvatTest.
      */
     public KuvatTest() {
         initComponents();
@@ -45,12 +45,15 @@ public final class KuvatTest extends javax.swing.JPanel {
         return vieheKuvat;
     }
 
+    /**
+     * Testi metodi.
+     */
     public void naytaViehekuvat() {
         String[] kuvat = haeVieheKuvat();
         String kuvanNimi = kuvat[indeksi];
         ImageIcon kuva = new ImageIcon(getClass().getResource("/hauki/" + kuvanNimi));
-        Image vieheKuva = kuva.getImage().getScaledInstance(jLabel_kuva.getWidth(), jLabel_kuva.getHeight(), Image.SCALE_SMOOTH);
-        jLabel_kuva.setIcon(new ImageIcon(vieheKuva));
+        Image vieheKuva = kuva.getImage().getScaledInstance(jLabelKuva.getWidth(), jLabelKuva.getHeight(), Image.SCALE_SMOOTH);
+        jLabelKuva.setIcon(new ImageIcon(vieheKuva));
     }
 
     /**
@@ -62,7 +65,7 @@ public final class KuvatTest extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel_kuva = new javax.swing.JLabel();
+        jLabelKuva = new javax.swing.JLabel();
         edellinen = new javax.swing.JButton();
         seuraava = new javax.swing.JButton();
 
@@ -88,7 +91,7 @@ public final class KuvatTest extends javax.swing.JPanel {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel_kuva, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabelKuva, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
             .addGroup(layout.createSequentialGroup()
                 .addGap(241, 241, 241)
@@ -101,7 +104,7 @@ public final class KuvatTest extends javax.swing.JPanel {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel_kuva, javax.swing.GroupLayout.PREFERRED_SIZE, 394, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jLabelKuva, javax.swing.GroupLayout.PREFERRED_SIZE, 394, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 41, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(edellinen, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -121,7 +124,7 @@ public final class KuvatTest extends javax.swing.JPanel {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton edellinen;
-    private javax.swing.JLabel jLabel_kuva;
+    private javax.swing.JLabel jLabelKuva;
     private javax.swing.JButton seuraava;
     // End of variables declaration//GEN-END:variables
 }

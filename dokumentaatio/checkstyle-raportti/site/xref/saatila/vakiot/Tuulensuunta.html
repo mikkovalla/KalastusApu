@@ -16,11 +16,24 @@
 <a class="jxr_linenumber" name="L8" href="#L8">8</a>   <em class="jxr_javadoccomment">/**</em>
 <a class="jxr_linenumber" name="L9" href="#L9">9</a>   <em class="jxr_javadoccomment"> *</em>
 <a class="jxr_linenumber" name="L10" href="#L10">10</a>  <em class="jxr_javadoccomment"> * Enum luokka Tuulensuunta joka määrittää tuulen suunnat ilmansuuntien mukaan</em>
-<a class="jxr_linenumber" name="L11" href="#L11">11</a>  <em class="jxr_javadoccomment"> vakioina.</em>
-<a class="jxr_linenumber" name="L12" href="#L12">12</a>  <em class="jxr_javadoccomment"> */</em>
-<a class="jxr_linenumber" name="L13" href="#L13">13</a>  <strong class="jxr_keyword">public</strong> enum <a href="../../saatila/vakiot/Tuulensuunta.html">Tuulensuunta</a> {
-<a class="jxr_linenumber" name="L14" href="#L14">14</a>      POHJOINEN, KOILLINEN, ITÄ, KAAKKO, ETELÄ, LOUNAS, LÄNSI, LUODE;
-<a class="jxr_linenumber" name="L15" href="#L15">15</a>  }
+<a class="jxr_linenumber" name="L11" href="#L11">11</a>  <em class="jxr_javadoccomment"> * vakioina. Int tyyppinen luokitus arvoa käytetään määrittäessä tuulensuunnan</em>
+<a class="jxr_linenumber" name="L12" href="#L12">12</a>  <em class="jxr_javadoccomment"> * maukainen kalastustapa.</em>
+<a class="jxr_linenumber" name="L13" href="#L13">13</a>  <em class="jxr_javadoccomment"> *</em>
+<a class="jxr_linenumber" name="L14" href="#L14">14</a>  <em class="jxr_javadoccomment"> * @see kalalaji.kalastustapa.KalastustapaSaanMukaan.</em>
+<a class="jxr_linenumber" name="L15" href="#L15">15</a>  <em class="jxr_javadoccomment"> */</em>
+<a class="jxr_linenumber" name="L16" href="#L16">16</a>  <strong class="jxr_keyword">public</strong> enum <a href="../../saatila/vakiot/Tuulensuunta.html">Tuulensuunta</a> {
+<a class="jxr_linenumber" name="L17" href="#L17">17</a>      POHJOINEN(1), KOILLINEN(1), ITA(1), KAAKKO(2), ETELA(2), LOUNAS(2), LANSI(2), LUODE(1);
+<a class="jxr_linenumber" name="L18" href="#L18">18</a>  
+<a class="jxr_linenumber" name="L19" href="#L19">19</a>      <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">int</strong> luokitus;
+<a class="jxr_linenumber" name="L20" href="#L20">20</a>  
+<a class="jxr_linenumber" name="L21" href="#L21">21</a>      <a href="../../saatila/vakiot/Tuulensuunta.html">Tuulensuunta</a>(<strong class="jxr_keyword">int</strong> luokitus) {
+<a class="jxr_linenumber" name="L22" href="#L22">22</a>          <strong class="jxr_keyword">this</strong>.luokitus = luokitus;
+<a class="jxr_linenumber" name="L23" href="#L23">23</a>      }
+<a class="jxr_linenumber" name="L24" href="#L24">24</a>  
+<a class="jxr_linenumber" name="L25" href="#L25">25</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">int</strong> getLuokitus() {
+<a class="jxr_linenumber" name="L26" href="#L26">26</a>          <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">this</strong>.luokitus;
+<a class="jxr_linenumber" name="L27" href="#L27">27</a>      }
+<a class="jxr_linenumber" name="L28" href="#L28">28</a>  }
 </pre>
 <hr/>
 <div id="footer">Copyright &#169; 2016. All rights reserved.</div>

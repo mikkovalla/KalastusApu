@@ -22,7 +22,7 @@ public enum KalastustapaSaanMukaan {
     private final String irtiRannasta;
     private final String tyyni;
     private final String tuulenPuoli;
-    private final String TyyniTuuliRaja;
+    private final String tyyniTuuliRaja;
 
     /**
      * Vakio luokan konstruktori.
@@ -31,14 +31,14 @@ public enum KalastustapaSaanMukaan {
      * @param irtiRannasta String tyyppinen vakion arvo
      * @param tyyni String tyyppinen vakion arvo
      * @param tuulenPuoli String tyyppinen vakion arvo
-     * @param TyyniTuuliRaja String tyyppinen vakion arvo
+     * @param tyyniTuuliRaja String tyyppinen vakion arvo
      */
-    private KalastustapaSaanMukaan(String rannassa, String irtiRannasta, String tyyni, String tuulenPuoli, String TyyniTuuliRaja) {
+    private KalastustapaSaanMukaan(String rannassa, String irtiRannasta, String tyyni, String tuulenPuoli, String tyyniTuuliRaja) {
         this.rannassa = rannassa;
         this.irtiRannasta = irtiRannasta;
         this.tyyni = tyyni;
         this.tuulenPuoli = tuulenPuoli;
-        this.TyyniTuuliRaja = TyyniTuuliRaja;
+        this.tyyniTuuliRaja = tyyniTuuliRaja;
     }
 
     /**
@@ -53,7 +53,7 @@ public enum KalastustapaSaanMukaan {
             if ((tuulensuunta.getLuokitus() == 1 || tuulensuunta.getLuokitus() == 2) && (nopeus > 0 || nopeus <= 6)) {
                 return this.tuulenPuoli;
             } else if (tuulensuunta.getLuokitus() == 1 && (nopeus >= 7 || nopeus <= 12)) {
-                return this.TyyniTuuliRaja;
+                return this.tyyniTuuliRaja;
             }
             return this.tyyni;
         }
