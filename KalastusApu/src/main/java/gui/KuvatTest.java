@@ -36,7 +36,6 @@ public final class KuvatTest extends javax.swing.JPanel {
      */
     public KuvatTest() {
         initComponents();
-        naytaViehekuvat();
     }
     int indeksi = 0;
 

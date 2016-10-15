@@ -33,7 +33,7 @@ public class Main {
         /**
          * Olio testaus tähän alle.
          */
-        SesonkiNyt sn = new SesonkiNyt();
+        /*SesonkiNyt sn = new SesonkiNyt();
         AlueValinta av = new AlueValinta(MERI, "", 8, -30);
         Tuuli t = new Tuuli(POHJOINEN, 5);
         Pilvisyys p = new Pilvisyys(SUMUINEN);
@@ -49,7 +49,7 @@ public class Main {
         System.out.println("Saaliskalat: \n" + Kalat.Hauki.saalisKalatSesonginMukaan() + "\n");
         System.out.println("Kalastustapa: \n" + Kalat.Hauki.kalastustapaSesonginMukaan() + "\n");
         System.out.println("Kalastustapa sään mukaan: \n" + Kalat.Hauki.kalastustapaSaanMukaan(t.getNopeus(), av.vedenKorkeus()));
-        //KuvatTest kuvattest = new KuvatTest();
-
+        */KuvatTest kuvattest = new KuvatTest();
+        kuvattest.kuva();
     }
 }
