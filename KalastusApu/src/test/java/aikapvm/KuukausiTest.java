@@ -24,7 +24,6 @@ public class KuukausiTest {
     public void setUp() {
         k = new Kuukausi();
         kk = new GregorianCalendar();
-        this.kuukausi = kuukausi;
     }
 
     @Test

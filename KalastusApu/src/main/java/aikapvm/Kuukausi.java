@@ -33,17 +33,19 @@ public class Kuukausi {
     }
 
     /**
-     * Metodissa if lause tarkistaa että kk muuttuja on arvoväliltä 1 ja 12.
+     * Boolean Metodissa if lause tarkistaa että kk muuttuja on arvoväliltä 1 ja
+     * 12.
      *
      * @param kk on int tyyppinen joka vastaa haluttua kuukautta.
+     * @return true jos arvo on oikea ja aseta parametrinä saatu arvo. False jos
+     * parametrinä annettu arvo on väärä.
      */
-    public void setKuukausi(int kk) {
-
-        if (kk <= 12 && kk >= 1) {
-            this.kuukausi = kk;
-        } else {
-            System.out.println("Syötä kuukauden numero väliltä 1 ja 12.");
+    public boolean setKuukausi(int kk) {
+        if (kk > 12 || kk < 1) {
+            return false;
         }
+        this.kuukausi = kk;
+        return true;
     }
 
     /**
