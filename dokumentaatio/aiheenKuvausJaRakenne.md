@@ -33,3 +33,15 @@ Käyttäjä käyttää ohjelmaa seuraavanlaisesti:
 ## Sekvenssikaavio
 
 ![Sekvenssikaavio](https://github.com/mikkovalla/KalastusApu/blob/master/dokumentaatio/sekvenssi_kaaviot.png)
+
+## Ohjelman Rakenne
+
+Pakkaus aikapvm pitää sisällään Enum luokan Kuukaudet, luokan Kuukausi, ja luokan SesonkiNyt. SesonkiNyt luokan ilmentymä pitää sisällään ajankohtaisen sesongin Kuukausi luokan ilmentymän antaman arvon mukaan.
+
+Pakkaus alue sisältää Enum luokan Vesi ja Rajapinnan Alue, joita käytetään luokassa AlueValinta luomaan ilmentymä kalastusalueesta.
+
+Pakkaus saa sisältää pakkauksen vakiot jossa on Enum luokat joissa määritetään sää olosuhteita koskevat vakio arvot, pakkauksen saa jonka luokat luovat ilmentymät ja tarjoavat metodit Enum vakioiden käyttöön, sekä pakkaus logiikka minkä sisältämä luokka SaaNyt luo ilmentymän ajankohtaisesta saa tilasta.
+
+Pakkaus kalalaji sisältää kalaa koskevat pakkaukset sekä luokat, joissa määritetään esiintyminen, kalastustavat, vieheet sekä saaliskalat, ja vakio luokka Kalat luo ilmentymän kalasta joka sisältää haluttua kalalajia koskevat tiedot.
+
+Viimeisenä ja keskeisimpänä on GUI joka luo käyttöliittymän. 
