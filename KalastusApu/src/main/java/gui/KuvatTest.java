@@ -5,7 +5,7 @@
  */
 package gui;
 
-import java.awt.Image;
+import java.awt.*;
 import java.io.File;
 import javax.swing.ImageIcon;
 import kalalaji.kalat.Kalat;
@@ -28,7 +28,7 @@ public final class KuvatTest extends javax.swing.JPanel {
     private Pilvisyys p = new Pilvisyys(AURINKOINEN);
     private Sade s = new Sade(POUTA);
     private SaaNyt saanyt = new SaaNyt(p, s, t);
-    private Kalat hauki = Kalat.Hauki;
+    private Kalat hauki = Kalat.HAUKI;
     private Vieheet viehe = new Vieheet(hauki);
 
     /**
@@ -36,6 +36,8 @@ public final class KuvatTest extends javax.swing.JPanel {
      */
     public KuvatTest() {
         initComponents();
+        naytaViehekuvat();
+        run();
     }
     int indeksi = 0;
 
@@ -43,6 +45,10 @@ public final class KuvatTest extends javax.swing.JPanel {
         File kansio = new File(getClass().getResource("/hauki").getFile());
         String[] vieheKuvat = kansio.list();
         return vieheKuvat;
+    }
+
+    public void run() {
+        new KuvatTest().setVisible(true);
     }
 
     /**
@@ -120,7 +126,6 @@ public final class KuvatTest extends javax.swing.JPanel {
     private void seuraavaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_seuraavaActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_seuraavaActionPerformed
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton edellinen;
