@@ -17,7 +17,7 @@ import static org.junit.Assert.*;
 public class AlueValintaTest {
 
     AlueValinta paikka;
-    private Vesi vesi = MERI;
+    private String vesi = "meri";
     private String vari = "sininen";
     private final int lampo = 10;
     private final int korkeus = 0;
@@ -29,11 +29,11 @@ public class AlueValintaTest {
 
     @Test
     public void konstruktoriAsettaaArvon() {
-        vesi = MERI;
+        String v = "meri";
         String vari2 = "sininen";
         int lampo2 = 12;
         int korkeus2 = -10;
-        paikka = new AlueValinta(vesi, vari2, lampo2, korkeus2);
+        paikka = new AlueValinta(v, vari2, lampo2, korkeus2);
         assertEquals(paikka.getAlue(), "MERI");
     }
 
@@ -119,7 +119,7 @@ public class AlueValintaTest {
 
     @Test
     public void testOletusVedenVariPalauttaaKuukaudenMukaanOikeanArvonJarvi() {
-        AlueValinta jarvi = new AlueValinta(Vesi.JARVI, "punainen", 15, 0);
+        AlueValinta jarvi = new AlueValinta("jarvi", "punainen", 15, 0);
         jarvi.setVedenVari("");
         jarvi.oletusVedenVari();
         assertEquals(jarvi.vedenVari(), "tumman humuksinen");
@@ -127,7 +127,7 @@ public class AlueValintaTest {
 
     @Test
     public void testOletusVedenVariPalauttaaKuukaudenMukaanOikeanArvonJoki() {
-        AlueValinta joki = new AlueValinta(Vesi.JOKI, "punainen", 15, 0);
+        AlueValinta joki = new AlueValinta("joki", "punainen", 15, 0);
         joki.setVedenVari("");
         joki.oletusVedenVari();
         assertEquals(joki.vedenVari(), "tumman humuksinen");

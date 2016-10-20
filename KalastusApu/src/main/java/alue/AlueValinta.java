@@ -17,7 +17,7 @@ public class AlueValinta implements Alue {
     private String vedenVari;
     private int vedenLampo;
     private int vedenKorkeus;
-    private final Vesi vesi;
+    private Vesi vesi;
 
     /**
      * Konstruktori luo alueen ilmentymän.
@@ -27,8 +27,8 @@ public class AlueValinta implements Alue {
      * @param lampo käyttäjän asettama veden lämpö.
      * @param korkeus käyttäjän asettama vedenkorkeus.
      */
-    public AlueValinta(Vesi vesi, String vari, int lampo, int korkeus) {
-        this.vesi = vesi;
+    public AlueValinta(String vesi, String vari, int lampo, int korkeus) {
+        this.vesi = getVesiVakio(vesi);
         this.vedenVari = vari;
         this.vedenLampo = lampo;
         this.vedenKorkeus = korkeus;
@@ -74,12 +74,10 @@ public class AlueValinta implements Alue {
      * arvon jos se on ehto lauseessa sallittu arvo.
      */
     public void setVedenLampo(int lampo) {
-        try {
-            if (lampo > 0) {
-                this.vedenLampo = lampo;
-            }
-        } catch (Exception e) {
-            System.out.println("Anna vedenlampo joka on yli 0 " + e);
+        if (lampo > 0) {
+            this.vedenLampo = lampo;
+        } else {
+            this.vedenLampo = 14;
         }
     }
 
@@ -106,6 +104,25 @@ public class AlueValinta implements Alue {
     @Override
     public void oletusVedenVari() {
         setVedenVari(vesi.getSavySesonginMukaan(vesi, sn));
+    }
+
+    /**
+     * Metodi joka palauttaa string parametristä Enum vastaavan arvon.
+     *
+     * @param vesi String tyyppinen parametri.
+     * @return Enum vakio arvo.
+     */
+    public static Vesi getVesiVakio(String vesi) {
+        switch (vesi.toUpperCase()) {
+            case "MERI":
+                return Vesi.MERI;
+            case "JARVI":
+                return Vesi.JARVI;
+            case "JOKI":
+                return Vesi.JOKI;
+            default:
+                return Vesi.MERI;
+        }
     }
 
     /**

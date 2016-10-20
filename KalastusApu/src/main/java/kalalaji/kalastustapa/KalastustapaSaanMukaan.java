@@ -45,20 +45,17 @@ public enum KalastustapaSaanMukaan {
      * Luokan metodi jossa tuulensuunta vakio arvon perusteella määritetään
      * kalastustapa. Oletuksena aina tuulee.
      *
+     * @param suunta Tuulensuunta vakio arvo.
      * @param nopeus tuulen nopeus int tyyppisneä.
      * @return String tyyppisenä ehdon ja parametrin mukainen merkkijono
      */
-    public String kalastusTapaSaanMukaanTuulenNopeusJaSuunta(int nopeus) {
-        for (Tuulensuunta tuulensuunta : Tuulensuunta.values()) {
-            if ((tuulensuunta.getLuokitus() == 1 || tuulensuunta.getLuokitus() == 2) && (nopeus > 0 || nopeus <= 6)) {
-                return this.tuulenPuoli;
-            } else if (tuulensuunta.getLuokitus() == 1 && (nopeus >= 7 || nopeus <= 12)) {
-                return this.tyyniTuuliRaja;
-            }
-            return this.tyyni;
+    public String kalastusTapaSaanMukaanTuulenNopeusJaSuunta(Tuulensuunta suunta, int nopeus) {
+        if (nopeus > 0 && nopeus <= 6) {
+            return this.tuulenPuoli;
+        } else if ((suunta.getLuokitus() == 2) && (nopeus >= 7 && nopeus <= 12)) {
+            return this.tyyniTuuliRaja;
         }
-
-        return this.tuulenPuoli;
+        return this.tyyni;
     }
 
     /**

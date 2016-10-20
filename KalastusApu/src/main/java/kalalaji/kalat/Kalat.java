@@ -9,6 +9,7 @@ import aikapvm.SesonkiNyt;
 import kalalaji.esiintyminen.*;
 import kalalaji.kalastustapa.*;
 import kalalaji.saaliskalat.*;
+import saatila.saa.Tuuli;
 
 /**
  * Vakio luokka joka luo yhden olion joka sisältää esiintymisen sekä
@@ -18,7 +19,7 @@ import kalalaji.saaliskalat.*;
 public enum Kalat {
     //Lisättynä vain hauki jotta ohjelma pysyisi siedettävässä mittakaavassa tässä vaiheessa.
     //esim Ahven, Kuha, Taimen;
-    Hauki(Esiintyminen.HAUKI, KalastustapaYleinen.HAUKI, Saaliskalat.HAUKI, KalastustapaSaanMukaan.HAUKI);
+    HAUKI(Esiintyminen.HAUKI, KalastustapaYleinen.HAUKI, Saaliskalat.HAUKI, KalastustapaSaanMukaan.HAUKI);
 
     private final Esiintyminen esiintyminen;
     private final KalastustapaYleinen kalastustapa;
@@ -72,11 +73,11 @@ public enum Kalat {
      * Metodi hakee vakio kalaa koskevan kalastustavan tuulen sekä
      * vedenkorkeuden mukaan.
      *
-     * @param nopeus tuulen nopeus int tyyppisenä.
+     * @param tuuli Tuuli luokan ilmentymä.
      * @param korkeus vedenkorkeus int tyyppisenä.
      * @return String typpisen vakio arvon metodin parametrien perusteella.
      */
-    public String kalastustapaSaanMukaan(int nopeus, int korkeus) {
-        return kalastustapaSaanMukaan.kalastusTapaSaanMukaanTuulenNopeusJaSuunta(nopeus) + " " + kalastustapaSaanMukaan.kalastusTapaSaanMukaanVedenKorkeus(korkeus);
+    public String kalastustapaSaanMukaan(Tuuli tuuli, int korkeus) {
+        return kalastustapaSaanMukaan.kalastusTapaSaanMukaanTuulenNopeusJaSuunta(tuuli.getSuunta(), tuuli.getNopeus()) + " " + kalastustapaSaanMukaan.kalastusTapaSaanMukaanVedenKorkeus(korkeus);
     }
 }

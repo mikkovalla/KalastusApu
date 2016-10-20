@@ -12,9 +12,7 @@ import saatila.logiikka.SaaNyt;
 import saatila.saa.Pilvisyys;
 import saatila.saa.Sade;
 import saatila.saa.Tuuli;
-import static saatila.vakiot.Sateet.POUTA;
 import static saatila.vakiot.Sateet.VESITIHKU;
-import static saatila.vakiot.Taivas.AURINKOINEN;
 import static saatila.vakiot.Taivas.SUMUINEN;
 import static saatila.vakiot.Tuulensuunta.*;
 
@@ -34,8 +32,8 @@ public class Main {
          * Olio testaus tähän alle.
          */
         SesonkiNyt sn = new SesonkiNyt();
-        AlueValinta av = new AlueValinta(MERI, "", 8, -30);
-        Tuuli t = new Tuuli(POHJOINEN, 5);
+        AlueValinta av = new AlueValinta("meri", "", 8, -30);
+        Tuuli t = new Tuuli(POHJOINEN, 12);
         Pilvisyys p = new Pilvisyys(SUMUINEN);
         Sade s = new Sade(VESITIHKU);
         SaaNyt saa = new SaaNyt(p, s, t);
@@ -44,10 +42,10 @@ public class Main {
         System.out.println(av.toString());
         System.out.println(saa.getSaaNyt());
         System.out.println("");
-        System.out.println("Kohde kala: " + Kalat.Hauki + "\n");
-        System.out.println("Esiintyminen: \n" + Kalat.Hauki.esiintyySesonginMukaan() + "\n");
-        System.out.println("Saaliskalat: \n" + Kalat.Hauki.saalisKalatSesonginMukaan() + "\n");
-        System.out.println("Kalastustapa: \n" + Kalat.Hauki.kalastustapaSesonginMukaan() + "\n");
-        System.out.println("Kalastustapa sään mukaan: \n" + Kalat.Hauki.kalastustapaSaanMukaan(t.getNopeus(), av.vedenKorkeus()));
+        System.out.println("Kohde kala: " + Kalat.HAUKI + "\n");
+        System.out.println("Esiintyminen: \n" + Kalat.HAUKI.esiintyySesonginMukaan() + "\n");
+        System.out.println("Saaliskalat: \n" + Kalat.HAUKI.saalisKalatSesonginMukaan() + "\n");
+        System.out.println("Kalastustapa: \n" + Kalat.HAUKI.kalastustapaSesonginMukaan() + "\n");
+        System.out.println("Kalastustapa sään mukaan: \n" + Kalat.HAUKI.kalastustapaSaanMukaan(t, av.vedenKorkeus()));
     }
 }
