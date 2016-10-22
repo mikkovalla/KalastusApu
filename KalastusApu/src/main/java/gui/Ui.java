@@ -7,6 +7,7 @@ package gui;
 
 import alue.AlueValinta;
 import kalalaji.kalat.Kalat;
+import kalalaji.vieheet.Vieheet;
 import saatila.saa.Tuuli;
 import saatila.vakiot.Tuulensuunta;
 
@@ -17,37 +18,51 @@ import saatila.vakiot.Tuulensuunta;
 public class Ui extends javax.swing.JFrame {
 
     /**
-     * Creates new form Ui
+     * Ohjelman graafinen käyttöjärjestelmä. Ohjelma kaatuu väärästä syötteestä.
+     * Viehe kuva sään mukaan ei palauta oikeita kuvia. Sisältää tässä vaiheessa
+     * vain Hauki arvot.
      */
-    private Tuulensuunta tuulenSuunta;
     private int tuulenNopeus;
-    private int kuvaIndeksi;
+    private int kuvaIndeksi = 0;
     private Kalat kala;
-    private Tuuli tuuli;
-    private AlueValinta alueVa;
+    private final Tuuli tuuli;
+    private final AlueValinta alueVa;
+    private final Vieheet viehe;
 
+    /**
+     * Konstruktori.
+     */
     public Ui() {
         initComponents();
-    }
-
-    public AlueValinta alueValintaOlio() {
-        alueVa = new AlueValinta(
-                alueValitsin1.getSelectedItem().toString(),
+        this.viehe = new Vieheet(kala);
+        this.alueVa = new AlueValinta(alueValitsin1.getSelectedItem().toString(),
                 "",
                 getVedenLampo(),
                 getVedenLampo());
-
-        return alueVa;
+        this.tuuli = new Tuuli(Tuulensuunta.valueOf(tuulensuuntaValitsin.getSelectedItem().toString().toUpperCase()),
+                getTuulenNopeus());
+        this.kala = Kalat.valueOf(kalaLajiValitsin.getSelectedItem().toString().toUpperCase());
     }
 
+    /**
+     * Metodi tarkistaa ja muuntaa käyttäjän syöttmän vedenkorkeuden int
+     * tyyppiseksi tai asettaa oletus arvon.
+     *
+     * @return vedenkorkeus int tyyppisenä.
+     */
     public int getVedenKorkeus() {
         if (vedenKorkeusValitsin1.getText().isEmpty()) {
             vedenKorkeusValitsin1.setText("0");
-            return Integer.parseInt(vedenKorkeusValitsin1.getText());
         }
         return Integer.parseInt(vedenKorkeusValitsin1.getText());
     }
 
+    /**
+     * Metodi tarkistaa syötetyn vedenlämmön arvon. Asettaa oletuksen jos arvo
+     * ei ole oikea.
+     *
+     * @return vedenlämpö int tyyppisenä.
+     */
     public int getVedenLampo() {
         int lampo;
         if (vedenLampoValitsin1.getText().isEmpty()) {
@@ -63,12 +78,11 @@ public class Ui extends javax.swing.JFrame {
         return lampo;
     }
 
-    public Tuuli tuuli() {
-        tuulenSuunta = Tuulensuunta.valueOf(tuulensuuntaValitsin.getSelectedItem().toString().toUpperCase());
-        tuuli = new Tuuli(tuulenSuunta, getTuulenNopeus());
-        return tuuli;
-    }
-
+    /**
+     * Metodi muuntaa syötetyn tuulennopeus arvon.
+     *
+     * @return tuulennopeus int tyyppisenä.
+     */
     public int getTuulenNopeus() {
         if (tuulenNopeusValitsin.getText().isEmpty()) {
             tuulenNopeusValitsin.setText("6");
@@ -83,9 +97,14 @@ public class Ui extends javax.swing.JFrame {
         return tuulenNopeus;
     }
 
-    public Kalat kala() {
-        kala = Kalat.valueOf(kalaLajiValitsin.getSelectedItem().toString().toUpperCase());
-        return kala;
+    /**
+     * Metodi muuntaa Kala vakio arvon String tyyppiseksi.
+     *
+     * @return Kala vakio arvo String tyyppisenä.
+     */
+    public String haettuNimi() {
+        String haettuNimi = kala.name().toLowerCase();
+        return haettuNimi;
     }
 
     /**
@@ -105,7 +124,6 @@ public class Ui extends javax.swing.JFrame {
         jTextArea2KalastustapaSaanMukaan = new javax.swing.JTextArea();
         jScrollPane3 = new javax.swing.JScrollPane();
         jTextArea3KalastusTapaYleinen = new javax.swing.JTextArea();
-        jPanelVieheKuva = new javax.swing.JPanel();
         jSeparator1 = new javax.swing.JSeparator();
         alue1 = new javax.swing.JPanel();
         alueValitsin1 = new javax.swing.JComboBox<>();
@@ -130,6 +148,7 @@ public class Ui extends javax.swing.JFrame {
         haeValinta = new javax.swing.JButton();
         jButtonSeuraava = new javax.swing.JButton();
         jButtonEdellinen1 = new javax.swing.JButton();
+        jLabelVieheKuva = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("KalastusApu");
@@ -154,20 +173,6 @@ public class Ui extends javax.swing.JFrame {
         jTextArea3KalastusTapaYleinen.setColumns(20);
         jTextArea3KalastusTapaYleinen.setRows(5);
         jScrollPane3.setViewportView(jTextArea3KalastusTapaYleinen);
-
-        jPanelVieheKuva.setBackground(new java.awt.Color(255, 255, 255));
-        jPanelVieheKuva.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-
-        javax.swing.GroupLayout jPanelVieheKuvaLayout = new javax.swing.GroupLayout(jPanelVieheKuva);
-        jPanelVieheKuva.setLayout(jPanelVieheKuvaLayout);
-        jPanelVieheKuvaLayout.setHorizontalGroup(
-            jPanelVieheKuvaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 721, Short.MAX_VALUE)
-        );
-        jPanelVieheKuvaLayout.setVerticalGroup(
-            jPanelVieheKuvaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
 
         alue1.setBackground(new java.awt.Color(0, 153, 255));
         alue1.setDoubleBuffered(false);
@@ -197,7 +202,7 @@ public class Ui extends javax.swing.JFrame {
 
         kalaLajiValitsin.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Hauki", "Ahven", "Kuha", "Taimen" }));
 
-        tuulensuuntaValitsin.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Pohjoinen", "Koillinen", "Itä", "Kaakko", "Etelä", "Lounas", "Länsi", "Luode" }));
+        tuulensuuntaValitsin.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Pohjoinen", "Koillinen", "Ita", "Kaakko", "Etela", "Lounas", "Lansi", "Luode" }));
 
         tuulensuunta.setForeground(new java.awt.Color(255, 255, 255));
         tuulensuunta.setText("Tuulensuunta");
@@ -221,7 +226,7 @@ public class Ui extends javax.swing.JFrame {
 
         haeValinta.setBackground(new java.awt.Color(0, 153, 204));
         haeValinta.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
-        haeValinta.setForeground(new java.awt.Color(0, 153, 204));
+        haeValinta.setForeground(new java.awt.Color(0, 51, 204));
         haeValinta.setText("Hae");
         haeValinta.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -364,17 +369,20 @@ public class Ui extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 497, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 497, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 497, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 497, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jButtonEdellinen1, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jButtonSeuraava, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jPanelVieheKuva, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addComponent(alue1, javax.swing.GroupLayout.PREFERRED_SIZE, 1250, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addGap(412, 412, 412)
+                                .addComponent(jButtonSeuraava, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 0, Short.MAX_VALUE))
+                            .addComponent(jLabelVieheKuva, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(alue1, javax.swing.GroupLayout.PREFERRED_SIZE, 1250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addComponent(jScrollPane1))
+                .addContainerGap())
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                     .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -387,17 +395,17 @@ public class Ui extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(alue1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(12, 12, 12)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jPanelVieheKuva, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabelVieheKuva, javax.swing.GroupLayout.PREFERRED_SIZE, 259, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jButtonEdellinen1, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -418,18 +426,46 @@ public class Ui extends javax.swing.JFrame {
         getVedenKorkeus();
         getVedenLampo();
 
-        jTextArea1Esiintyminen.append(kala().esiintyySesonginMukaan());
-        jTextArea2KalastustapaSaanMukaan.append(kala().kalastustapaSaanMukaan(tuuli(), getVedenKorkeus()));
-        jTextArea2SaalisKalat.append(kala().saalisKalatSesonginMukaan());
-        jTextArea3KalastusTapaYleinen.append(kala().kalastustapaSesonginMukaan());
+        jTextArea1Esiintyminen.append(kala.esiintyySesonginMukaan());
+        jTextArea2KalastustapaSaanMukaan.append(kala.kalastustapaSaanMukaan(tuuli, getVedenKorkeus()));
+        jTextArea2SaalisKalat.append(kala.saalisKalatSesonginMukaan());
+        jTextArea3KalastusTapaYleinen.append(kala.kalastustapaSesonginMukaan());
+        viehe.naytaKuvat(kuvaIndeksi,
+                jLabelVieheKuva,
+                pilvisyysValitsin.getSelectedItem().toString().toLowerCase(),
+                sadeValitsin.getSelectedItem().toString().toLowerCase(),
+                haettuNimi());
     }//GEN-LAST:event_haeValintaActionPerformed
 
     private void jButtonSeuraavaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSeuraavaActionPerformed
-        // TODO add your handling code here:
+        kuvaIndeksi = kuvaIndeksi + 1;
+        if (kuvaIndeksi >= viehe.kuvatSaanMukaan(
+                pilvisyysValitsin.getSelectedItem().toString().toLowerCase(),
+                sadeValitsin.getSelectedItem().toString().toLowerCase(),
+                haettuNimi()).size()) {
+
+            kuvaIndeksi = viehe.kuvatSaanMukaan(
+                    pilvisyysValitsin.getSelectedItem().toString().toLowerCase(),
+                    sadeValitsin.getSelectedItem().toString().toLowerCase(),
+                    haettuNimi()).size() - 1;
+        }
+        viehe.naytaKuvat(kuvaIndeksi,
+                jLabelVieheKuva,
+                pilvisyysValitsin.getSelectedItem().toString().toLowerCase(),
+                sadeValitsin.getSelectedItem().toString().toLowerCase(),
+                haettuNimi());
     }//GEN-LAST:event_jButtonSeuraavaActionPerformed
 
     private void jButtonEdellinen1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEdellinen1ActionPerformed
-        // TODO add your handling code here:
+        kuvaIndeksi = kuvaIndeksi - 1;
+        if (kuvaIndeksi < 0) {
+            kuvaIndeksi = 0;
+        }
+        viehe.naytaKuvat(kuvaIndeksi,
+                jLabelVieheKuva,
+                pilvisyysValitsin.getSelectedItem().toString().toLowerCase(),
+                sadeValitsin.getSelectedItem().toString().toLowerCase(),
+                haettuNimi());
     }//GEN-LAST:event_jButtonEdellinen1ActionPerformed
 
     /**
@@ -478,7 +514,7 @@ public class Ui extends javax.swing.JFrame {
     private javax.swing.JButton haeValinta;
     private javax.swing.JButton jButtonEdellinen1;
     private javax.swing.JButton jButtonSeuraava;
-    private javax.swing.JPanel jPanelVieheKuva;
+    private javax.swing.JLabel jLabelVieheKuva;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;

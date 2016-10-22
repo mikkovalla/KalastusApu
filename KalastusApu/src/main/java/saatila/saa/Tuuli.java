@@ -37,6 +37,11 @@ public class Tuuli {
         this.nopeus = nopeus;
     }
 
+    /**
+     * Metodi palauttaa Tuulensuunta vakio arvon.
+     *
+     * @return Tuulensuunta vakio.
+     */
     public Tuulensuunta getSuunta() {
         return this.suunta;
     }
