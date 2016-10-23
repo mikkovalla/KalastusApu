@@ -5,7 +5,6 @@
  */
 package alue;
 
-import static alue.Vesi.MERI;
 import org.junit.Before;
 import org.junit.Test;
 import static org.junit.Assert.*;
@@ -53,6 +52,15 @@ public class AlueValintaTest {
         paikka.setVedenVari("");
         paikka.oletusVedenVari();
         assertEquals(paikka.vedenVari(), "tumman vihertävä");
+    }
+
+    @Test
+    public void testOletusVedenVari() {
+        AlueValinta avl = new AlueValinta("meri", "", 10, 10);
+        if (avl.vedenVari().isEmpty()) {
+            avl.oletusVedenVari();
+            assertEquals(avl.vedenVari(), "tumman vihertävä");
+        }
     }
 
     @Test
@@ -131,6 +139,20 @@ public class AlueValintaTest {
         joki.setVedenVari("");
         joki.oletusVedenVari();
         assertEquals(joki.vedenVari(), "tumman humuksinen");
+    }
+
+    @Test
+    public void testToString() {
+        AlueValinta avl = new AlueValinta("meri", "", 10, 10);
+        if (avl.vedenKorkeus() >= 1) {
+            assertEquals(avl.toString(), "Alue on " + avl.getAlue() + ", veden vari on " + avl.vedenVari() + ", vedenlampö on " + avl.vedenLampo() + ", ja vedenkorkeus on " + avl.vedenKorkeus() + " senttimetriä plussalla");
+        }
+        avl.setVedenKorkeus(-9);
+        if (avl.vedenKorkeus() <= -1) {
+            assertEquals(avl.toString(), "Alue on " + avl.getAlue() + ", veden vari on " + avl.vedenVari() + ", vedenlampö on " + avl.vedenLampo() + ", ja vedenkorkeus on " + avl.vedenKorkeus() + " senttimetriä miinuksella");
+        }
+        avl.setVedenKorkeus(0);
+        assertEquals(avl.toString(), "Alue on " + avl.getAlue() + ", veden vari on " + avl.vedenVari() + ", vedenlampö on " + avl.vedenLampo() + ", ja vedenkorkeus on " + avl.vedenKorkeus() + " eli neutraali");
     }
 
 }

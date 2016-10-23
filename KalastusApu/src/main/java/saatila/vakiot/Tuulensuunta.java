@@ -11,7 +11,6 @@ package saatila.vakiot;
  * vakioina. Int tyyppinen luokitus arvoa käytetään määrittäessä tuulensuunnan
  * maukainen kalastustapa.
  *
- * @see kalalaji.kalastustapa.KalastustapaSaanMukaan.
  */
 public enum Tuulensuunta {
     POHJOINEN(1), KOILLINEN(1), ITA(1), KAAKKO(2), ETELA(2), LOUNAS(2), LANSI(2), LUODE(1);

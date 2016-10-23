@@ -5,6 +5,8 @@
  */
 package alue;
 
+import aikapvm.Kuukaudet;
+import aikapvm.Kuukausi;
 import aikapvm.SesonkiNyt;
 import org.junit.Test;
 import static org.junit.Assert.*;
@@ -60,4 +62,20 @@ public class VesiTest {
 
     }
 
+    @Test
+    public void testGetSavySwitchCaseTalvi() {
+        SesonkiNyt sesonkinyt = new SesonkiNyt();
+        switch (sesonkinyt.getSesonki()) {
+            case "TALVI":
+                assertEquals(Vesi.MERI.getSavyTalvi(), "sinertävän vihreä");
+            case "KEVAT":
+                assertEquals(Vesi.MERI.getSavyKevat(), "kirkas vihertävä");
+            case "KESA":
+                assertEquals(Vesi.MERI.getSavyKesa(), "ruskean vihertävä");
+            case "SYKSY":
+                assertEquals(Vesi.MERI.getSavySyksy(), "tumman vihertävä");
+            default:
+                assertEquals("Veden sävyä ei voitu antaa", "Veden sävyä ei voitu antaa");
+        }
+    }
 }

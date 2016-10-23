@@ -6,12 +6,6 @@
 package kalalaji.kalat;
 
 import aikapvm.SesonkiNyt;
-import java.awt.Image;
-import java.io.File;
-import java.util.Arrays;
-import javax.swing.ImageIcon;
-import javax.swing.JLabel;
-import javax.swing.JTextField;
 import kalalaji.esiintyminen.*;
 import kalalaji.kalastustapa.*;
 import kalalaji.saaliskalat.*;

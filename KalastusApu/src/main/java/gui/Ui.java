@@ -10,6 +10,7 @@ import java.io.IOException;
 import java.net.URISyntaxException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 import kalalaji.kalat.Kalat;
 import kalalaji.vieheet.Vieheet;
 import saatila.saa.Tuuli;
@@ -182,11 +183,23 @@ public class Ui extends javax.swing.JFrame {
         alue1.setDoubleBuffered(false);
         alue1.setName("Alue"); // NOI18N
 
-        alueValitsin1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Meri", "Jarvi", "Joki" }));
+        alueValitsin1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Meri" }));
 
         alueValinta1.setFont(new java.awt.Font("Nadeem", 1, 18)); // NOI18N
         alueValinta1.setForeground(new java.awt.Color(255, 255, 255));
         alueValinta1.setText("Alue");
+
+        vedenLampoValitsin1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                keyPressedVedenLampo(evt);
+            }
+        });
+
+        vedenKorkeusValitsin1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                keyPressedVedenKorkeus(evt);
+            }
+        });
 
         valitseAlue1.setForeground(new java.awt.Color(255, 255, 255));
         valitseAlue1.setText("Valitse alue");
@@ -204,7 +217,7 @@ public class Ui extends javax.swing.JFrame {
         valitseKalaLaji.setForeground(new java.awt.Color(255, 255, 255));
         valitseKalaLaji.setText("Valitse kalalaji");
 
-        kalaLajiValitsin.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Hauki", "Ahven", "Kuha", "Taimen" }));
+        kalaLajiValitsin.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Hauki" }));
 
         tuulensuuntaValitsin.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Pohjoinen", "Koillinen", "Ita", "Kaakko", "Etela", "Lounas", "Lansi", "Luode" }));
 
@@ -213,6 +226,12 @@ public class Ui extends javax.swing.JFrame {
 
         tuulennopeus.setForeground(new java.awt.Color(255, 255, 255));
         tuulennopeus.setText("Tuulennopeus");
+
+        tuulenNopeusValitsin.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                keyPressedTuulenNopeus(evt);
+            }
+        });
 
         saaValinta.setFont(new java.awt.Font("Nadeem", 1, 18)); // NOI18N
         saaValinta.setForeground(new java.awt.Color(255, 255, 255));
@@ -452,7 +471,7 @@ public class Ui extends javax.swing.JFrame {
                     pilvisyysValitsin.getSelectedItem().toString().toLowerCase(),
                     sadeValitsin.getSelectedItem().toString().toLowerCase(),
                     haettuNimi()).size()) {
-                
+
                 kuvaIndeksi = Vieheet.kuvatSaanMukaan(
                         pilvisyysValitsin.getSelectedItem().toString().toLowerCase(),
                         sadeValitsin.getSelectedItem().toString().toLowerCase(),
@@ -487,6 +506,45 @@ public class Ui extends javax.swing.JFrame {
             Logger.getLogger(Ui.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_jButtonEdellinen1ActionPerformed
+
+    private void keyPressedVedenLampo(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_keyPressedVedenLampo
+        char[] kirjaimet = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'w', 'x', 'y', 'z'};
+
+        for (char kirjain : kirjaimet) {
+            if (evt.getKeyChar() == kirjain) {
+                JOptionPane.showMessageDialog(jTextArea1Esiintyminen,
+                        "Hei, syötetään vaan niitä numeroita!!!!.",
+                        "Karmea VIRHE!!!!",
+                        JOptionPane.ERROR_MESSAGE);
+            }
+        }
+    }//GEN-LAST:event_keyPressedVedenLampo
+
+    private void keyPressedVedenKorkeus(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_keyPressedVedenKorkeus
+        char[] kirjaimet = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'w', 'x', 'y', 'z'};
+
+        for (char kirjain : kirjaimet) {
+            if (evt.getKeyChar() == kirjain) {
+                JOptionPane.showMessageDialog(jTextArea1Esiintyminen,
+                        "Hei, syötetään vaan niitä numeroita!!!!.",
+                        "Karmea VIRHE!!!!",
+                        JOptionPane.ERROR_MESSAGE);
+            }
+        }
+    }//GEN-LAST:event_keyPressedVedenKorkeus
+
+    private void keyPressedTuulenNopeus(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_keyPressedTuulenNopeus
+        char[] kirjaimet = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'w', 'x', 'y', 'z'};
+
+        for (char kirjain : kirjaimet) {
+            if (evt.getKeyChar() == kirjain) {
+                JOptionPane.showMessageDialog(jTextArea1Esiintyminen,
+                        "Hei, syötetään vaan VIELÄKIN niitä numeroita!!!!.",
+                        "TAAS Karmea VIRHE!!!!",
+                        JOptionPane.ERROR_MESSAGE);
+            }
+        }
+    }//GEN-LAST:event_keyPressedTuulenNopeus
 
     /**
      * @param args the command line arguments
@@ -523,6 +581,7 @@ public class Ui extends javax.swing.JFrame {
                 ui.setVisible(true);
             }
         });
+
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

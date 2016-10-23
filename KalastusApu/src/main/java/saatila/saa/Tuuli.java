@@ -22,7 +22,6 @@ public class Tuuli {
      *
      * @param suunta vakio arvo.
      * @param nopeus int arvo.
-     * @see saatila.vakiot.Tuulensuunta.
      */
     public Tuuli(Tuulensuunta suunta, int nopeus) {
         this.suunta = suunta;

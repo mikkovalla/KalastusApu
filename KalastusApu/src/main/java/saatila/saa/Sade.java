@@ -19,7 +19,6 @@ public class Sade {
      * Sade luokan konstruktori.
      *
      * @param sateet vakio arvo.
-     * @see saatila.vakiot.Sateet.
      */
     public Sade(Sateet sateet) {
         this.sateet = sateet;

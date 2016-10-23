@@ -25,7 +25,7 @@ under the License.
     <language>en-us</language>
     <copyright>&#169;2016</copyright>
     <item>
-      <title>File: 21,
+      <title>File: 19,
              Errors: 0,
              Warnings: 0,
              Infos: 0
@@ -44,20 +44,6 @@ under the License.
             </tr>
           </thead>
           <tbody>
-                          <tr>
-                <td>
-                  <a href="${project.url}/checkstyle.html#logiikka.Main.java">logiikka/Main.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-              </tr>
                           <tr>
                 <td>
                   <a href="${project.url}/checkstyle.html#aikapvm.Kuukaudet.java">aikapvm/Kuukaudet.java</a>
@@ -130,20 +116,6 @@ under the License.
               </tr>
                           <tr>
                 <td>
-                  <a href="${project.url}/checkstyle.html#saatila.logiikka.SaaNyt.java">saatila/logiikka/SaaNyt.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-              </tr>
-                          <tr>
-                <td>
                   <a href="${project.url}/checkstyle.html#aikapvm.SesonkiNyt.java">aikapvm/SesonkiNyt.java</a>
                 </td>
                 <td>
@@ -187,20 +159,6 @@ under the License.
                           <tr>
                 <td>
                   <a href="${project.url}/checkstyle.html#kalalaji.vieheet.Vieheet.java">kalalaji/vieheet/Vieheet.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="${project.url}/checkstyle.html#gui.KuvatTest.java">gui/KuvatTest.java</a>
                 </td>
                 <td>
                   0
@@ -327,6 +285,20 @@ under the License.
                           <tr>
                 <td>
                   <a href="${project.url}/checkstyle.html#alue.AlueValinta.java">alue/AlueValinta.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="${project.url}/checkstyle.html#gui.Ui.java">gui/Ui.java</a>
                 </td>
                 <td>
                   0

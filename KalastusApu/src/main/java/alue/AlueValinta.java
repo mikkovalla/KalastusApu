@@ -98,8 +98,6 @@ public class AlueValinta implements Alue {
     /**
      * Rajapinnasta peritty ylikirjoitettu metodi joka asettaa oletusveden
      * värin. setVedenVari metodi saa parametrinä Vesi Enum luokan metodin.
-     *
-     * @see alue.Vesi#getSavySesonginMukaan(alue.Vesi, aikapvm.SesonkiNyt).
      */
     @Override
     public void oletusVedenVari() {

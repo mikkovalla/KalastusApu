@@ -6,11 +6,15 @@
 package kalalaji.kalat;
 
 import aikapvm.SesonkiNyt;
+import alue.AlueValinta;
 import kalalaji.esiintyminen.*;
 import kalalaji.kalastustapa.*;
+import kalalaji.saaliskalat.Saaliskalat;
 import org.junit.Before;
 import org.junit.Test;
 import static org.junit.Assert.*;
+import saatila.saa.Tuuli;
+import saatila.vakiot.Tuulensuunta;
 
 /**
  *
@@ -19,9 +23,13 @@ import static org.junit.Assert.*;
 public class KalatTest {
 
     private KalastustapaYleinen haukiKalastus;
+    private KalastustapaSaanMukaan kalastusSaanMukaan;
     private Esiintyminen haukiEsiintyminen;
     Esiintyminen es;
     KalastustapaYleinen kt;
+    Saaliskalat saalis;
+    Tuuli tuuli;
+    AlueValinta alue;
     private SesonkiNyt sn = new SesonkiNyt();
     private String talviKalastus;
     private String kevatKalastus;
@@ -34,8 +42,12 @@ public class KalatTest {
 
     @Before
     public void setUp() {
+        alue = new AlueValinta("meri", "", 14, 10);
+        tuuli = new Tuuli(Tuulensuunta.ETELA, 10);
         haukiKalastus = KalastustapaYleinen.HAUKI;
         haukiEsiintyminen = Esiintyminen.HAUKI;
+        saalis = Saaliskalat.HAUKI;
+        kalastusSaanMukaan = KalastustapaSaanMukaan.HAUKI;
         this.talviKalastus = haukiKalastus.getTalviKalastus();
         this.kevatKalastus = haukiKalastus.getKevatKalastus();
         this.kesaKalastus = haukiKalastus.getKesaKalastus();
@@ -47,27 +59,26 @@ public class KalatTest {
     }
 
     @Test
-    public void testValueOf() {
-        assertEquals(haukiKalastus.getTalviKalastus(), this.talviKalastus);
-        assertEquals(haukiKalastus.getKevatKalastus(), this.kevatKalastus);
-        assertEquals(haukiKalastus.getKesaKalastus(), this.kesaKalastus);
-        assertEquals(haukiKalastus.getSyksyKalastus(), this.syksyKalastus);
-        assertEquals(haukiEsiintyminen.getTalviEsiintyminen(), this.talviEs);
-        assertEquals(haukiEsiintyminen.getKevatEsiintyminen(), this.kevatEs);
-        assertEquals(haukiEsiintyminen.getKesaEsiintyminen(), this.kesaEs);
-        assertEquals(haukiEsiintyminen.getSyksyEsiintyminen(), this.syksyEs);
-    }
-
-    @Test
     public void testEsiintyySesonginMukaan() {
-        String esm = haukiEsiintyminen.esiintyySesonginMukaan(haukiEsiintyminen, sn);
+        String esm = haukiEsiintyminen.esiintyySesonginMukaan(Esiintyminen.HAUKI, sn);
         assertEquals(esm, this.syksyEs);
     }
 
     @Test
     public void testKalastustapaSesonginMukaan() {
-        String ksm = haukiKalastus.kalastusSesonginMukaan(haukiKalastus, sn);
+        String ksm = haukiKalastus.kalastusSesonginMukaan(KalastustapaYleinen.HAUKI, sn);
         assertEquals(ksm, this.syksyKalastus);
+    }
+
+    @Test
+    public void testSaalisKalatSesonginMukaan() {
+        assertEquals(saalis.saalisSesonginMukaan(Saaliskalat.HAUKI, sn), "Ahven, Salakka, Särki, Lahna, Säyne, Silakka.");
+    }
+
+    @Test
+    public void testKalastustapaSaanMukaan() {
+        assertEquals(kalastusSaanMukaan.kalastusTapaSaanMukaanTuulenNopeusJaSuunta(tuuli.getSuunta(), tuuli.getNopeus())
+                + " " + kalastusSaanMukaan.kalastusTapaSaanMukaanVedenKorkeus(alue.vedenKorkeus()), "tuulen ja tyynen rajalla irti rannasta");
     }
 
 }

@@ -55,13 +55,19 @@
                     <targetClasses>
                         <param>aikapvm.*</param>
                         <param>alue.*</param>
-                        <param>kalalaji.*</param>
+                        <param>kalalaji.esiintyminen.*</param>
+                        <param>kalalaji.kalastustapa.*</param>
+                        <param>kalalaji.kalat.*</param>
+                        <param>kalalaji.saaliskalat.*</param>
                         <param>saatila.*</param>
                     </targetClasses>
                     <targetTests>
                         <param>aikapvm.*</param>
                         <param>alue.*</param>
-                        <param>kalalaji.*</param>
+                        <param>kalalaji.esiintyminen.*</param>
+                        <param>kalalaji.kalastustapa.*</param>
+                        <param>kalalaji.kalat.*</param>
+                        <param>kalalaji.saaliskalat.*</param>
                         <param>saatila.*</param>
                     </targetTests>
                 </configuration>

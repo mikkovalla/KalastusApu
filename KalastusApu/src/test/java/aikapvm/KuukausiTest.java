@@ -24,6 +24,7 @@ public class KuukausiTest {
     public void setUp() {
         k = new Kuukausi();
         kk = new GregorianCalendar();
+        this.kuukausi = kk.get(Calendar.MONTH) + 1;
     }
 
     @Test
@@ -60,6 +61,11 @@ public class KuukausiTest {
     public void getKuunNimiPalauttaaOikeanArvon() {
         String kn = k.getKuuNimi().name();
         assertEquals(k.getKuuNimi().toString(), kn);
+    }
+
+    @Test
+    public void testToString() {
+        assertEquals(k.toString(), "On " + k.getKuuNimi() + "(" + this.kuukausi + ")");
     }
 
 }
