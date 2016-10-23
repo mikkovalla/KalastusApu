@@ -26,6 +26,9 @@ Käyttäjä käyttää ohjelmaa seuraavanlaisesti:
 3. Käyttäjä syöttää vallitsevat sääolosuhteet
 4. Ohjelma esittää käyttäjälle viehe suositukset, esiintymis tietoa, kalastustavat, sekä tietoa saaliskaloista
 
+### HUOM!
+Ohjelma pitää käynnistää uudelleen ennen jokaista hakua.
+
 ## Luokkakaavio
 
 ![Luokkakaavio päivitetty](https://github.com/mikkovalla/KalastusApu/blob/master/dokumentaatio/kalastusApu_luokkakaavio.png)
@@ -44,4 +47,4 @@ Pakkaus saa sisältää pakkauksen vakiot jossa on Enum luokat joissa määritet
 
 Pakkaus kalalaji sisältää kalaa koskevat pakkaukset sekä luokat, joissa määritetään esiintyminen, kalastustavat, vieheet sekä saaliskalat, ja vakio luokka Kalat luo ilmentymän kalasta joka sisältää haluttua kalalajia koskevat tiedot.
 
-Viimeisenä ja keskeisimpänä on GUI joka luo käyttöliittymän. 
+Viimeisenä ja keskeisimpänä on GUI joka luo käyttöliittymän.

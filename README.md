@@ -22,10 +22,11 @@ Uistimien valinta pohjautuu tekijän omaan kokemukseen, oppaiden sekä limnologi
 
 5. [Pit-raportti kansio](https://github.com/mikkovalla/KalastusApu/tree/master/dokumentaatio/pit-raportti/201610152039)
 
+6. [JavaDoc KalastusApu](https://htmlpreview.github.io/?https://github.com/mikkovalla/KalastusApu/blob/master/dokumentaatio/JavaDoc_KalastusApu/index.html)
 
 ----------------------------------------------------------------
 ## Pit ja Checkstyle raportit
 
-1. [Pit-raportti html](https://htmlpreview.github.io/?https://github.com/mikkovalla/KalastusApu/blob/master/dokumentaatio/pit-raportti/201610152039/index.html)
+1. [Pit-raportti html](https://htmlpreview.github.io/?https://github.com/mikkovalla/KalastusApu/blob/master/dokumentaatio/pit-raportti/201610232303/index.html)
 
 2. [Checkstyle-raportti html](https://htmlpreview.github.io/?https://github.com/mikkovalla/KalastusApu/blob/master/dokumentaatio/checkstyle-raportti/site/checkstyle.html)

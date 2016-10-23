@@ -12,3 +12,5 @@ Päivä | Tunnit | Kuvaus
 05.10.2016 | 5h | koodia, testejä, siistimistä.
 06.10.2016 | 3h | koodia ja suunnittelua.
 07.10.2016 | 4h | repon päivittämistä, piirtelyä, koodaamista.
+09.10.2016 | 3h | koodaamista.
+11.10 - 23.10.2016 | noin 25h yhteensä | Virheiden korjaamista, testien kirjoittaminen, koodaus, refaktorointi, loppu palautus.
