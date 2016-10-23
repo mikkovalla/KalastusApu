@@ -6,6 +6,10 @@
 package gui;
 
 import alue.AlueValinta;
+import java.io.IOException;
+import java.net.URISyntaxException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import kalalaji.kalat.Kalat;
 import kalalaji.vieheet.Vieheet;
 import saatila.saa.Tuuli;
@@ -430,30 +434,42 @@ public class Ui extends javax.swing.JFrame {
         jTextArea2KalastustapaSaanMukaan.append(kala.kalastustapaSaanMukaan(tuuli, getVedenKorkeus()));
         jTextArea2SaalisKalat.append(kala.saalisKalatSesonginMukaan());
         jTextArea3KalastusTapaYleinen.append(kala.kalastustapaSesonginMukaan());
-        viehe.naytaKuvat(kuvaIndeksi,
-                jLabelVieheKuva,
-                pilvisyysValitsin.getSelectedItem().toString().toLowerCase(),
-                sadeValitsin.getSelectedItem().toString().toLowerCase(),
-                haettuNimi());
+        try {
+            viehe.naytaKuvat(kuvaIndeksi,
+                    jLabelVieheKuva,
+                    pilvisyysValitsin.getSelectedItem().toString().toLowerCase(),
+                    sadeValitsin.getSelectedItem().toString().toLowerCase(),
+                    haettuNimi());
+        } catch (IOException | URISyntaxException ex) {
+            Logger.getLogger(Ui.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_haeValintaActionPerformed
 
     private void jButtonSeuraavaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSeuraavaActionPerformed
         kuvaIndeksi = kuvaIndeksi + 1;
-        if (kuvaIndeksi >= viehe.kuvatSaanMukaan(
-                pilvisyysValitsin.getSelectedItem().toString().toLowerCase(),
-                sadeValitsin.getSelectedItem().toString().toLowerCase(),
-                haettuNimi()).size()) {
-
-            kuvaIndeksi = viehe.kuvatSaanMukaan(
+        try {
+            if (kuvaIndeksi >= Vieheet.kuvatSaanMukaan(
                     pilvisyysValitsin.getSelectedItem().toString().toLowerCase(),
                     sadeValitsin.getSelectedItem().toString().toLowerCase(),
-                    haettuNimi()).size() - 1;
+                    haettuNimi()).size()) {
+                
+                kuvaIndeksi = Vieheet.kuvatSaanMukaan(
+                        pilvisyysValitsin.getSelectedItem().toString().toLowerCase(),
+                        sadeValitsin.getSelectedItem().toString().toLowerCase(),
+                        haettuNimi()).size() - 1;
+            }
+        } catch (URISyntaxException | IOException ex) {
+            Logger.getLogger(Ui.class.getName()).log(Level.SEVERE, null, ex);
         }
-        viehe.naytaKuvat(kuvaIndeksi,
-                jLabelVieheKuva,
-                pilvisyysValitsin.getSelectedItem().toString().toLowerCase(),
-                sadeValitsin.getSelectedItem().toString().toLowerCase(),
-                haettuNimi());
+        try {
+            viehe.naytaKuvat(kuvaIndeksi,
+                    jLabelVieheKuva,
+                    pilvisyysValitsin.getSelectedItem().toString().toLowerCase(),
+                    sadeValitsin.getSelectedItem().toString().toLowerCase(),
+                    haettuNimi());
+        } catch (IOException | URISyntaxException ex) {
+            Logger.getLogger(Ui.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_jButtonSeuraavaActionPerformed
 
     private void jButtonEdellinen1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEdellinen1ActionPerformed
@@ -461,11 +477,15 @@ public class Ui extends javax.swing.JFrame {
         if (kuvaIndeksi < 0) {
             kuvaIndeksi = 0;
         }
-        viehe.naytaKuvat(kuvaIndeksi,
-                jLabelVieheKuva,
-                pilvisyysValitsin.getSelectedItem().toString().toLowerCase(),
-                sadeValitsin.getSelectedItem().toString().toLowerCase(),
-                haettuNimi());
+        try {
+            viehe.naytaKuvat(kuvaIndeksi,
+                    jLabelVieheKuva,
+                    pilvisyysValitsin.getSelectedItem().toString().toLowerCase(),
+                    sadeValitsin.getSelectedItem().toString().toLowerCase(),
+                    haettuNimi());
+        } catch (IOException | URISyntaxException ex) {
+            Logger.getLogger(Ui.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_jButtonEdellinen1ActionPerformed
 
     /**
